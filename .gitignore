@@ -1,23 +1,28 @@
-# Compiled class file
-*.class
-
-# Log file
+.DS_Store
+.springBeans
 *.log
+*.bak
+bin/
+classes/
+target/
 
-# BlueJ files
-*.ctxt
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea
+out/
+test-output/
+atlassian-ide-plugin.xml
+.gradletasknamecache
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+*.settings/
+*bin/
+*logs/
+*target/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+*rebel.xml
+mbg/src/main/resources/mybatisGenerator.properties
+main/src/main/resources/application-master.yml
+main/src/main/resources/application-develop.yml
+vuepress/
