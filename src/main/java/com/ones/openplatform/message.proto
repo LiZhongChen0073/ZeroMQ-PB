@@ -1,0 +1,25 @@
+syntax = "proto3";
+package protocol;
+option java_package = "com.ones.openplatform.protocol";
+
+import "resources.proto";
+import "plugin.proto";
+import "common.proto";
+import "control.proto";
+import "cmdb.proto";
+import "notify.proto";
+
+// 顶层消息
+
+message PlatformMessage {
+  // MessageHeader
+  RouterMessage Header = 1;
+  // body
+  ControlMessage Control = 5;
+  PluginMessage Plugin = 10;
+  CmdbMessage Cmdb = 15;
+  ResourceMessage Resource = 20;
+  NotifyMessage Notify = 25;
+}
+
+

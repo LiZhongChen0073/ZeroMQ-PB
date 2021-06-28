@@ -1,0 +1,128 @@
+syntax = "proto3";
+package protocol;
+option java_package = "com.ones.openplatform.protocol";
+
+// 定义一些通用的数据结构
+
+message PluginVersion{
+    int32 Major = 1;
+    int32 Minor = 2;
+    int32 Revision = 3;
+}
+
+message HostDescriptor{
+  string HostID = 10;
+  string Name = 11;
+  string Language = 12;
+  PluginVersion HostVersion = 15;
+  PluginVersion HostSubVersion = 16;
+  PluginVersion MinSystemVersion = 18;
+  PluginVersion LanguageVersion = 19;
+}
+
+message PluginDescriptor{
+  enum ApplicationMode{
+    System = 0;
+    Organization = 1;
+    Team = 2;
+  }
+  string ApplicationID = 1;
+  string Name = 2;
+  ApplicationMode Mode = 3;
+  string Language = 4;
+  PluginVersion ApplicationVersion = 10;
+  PluginVersion HostVersion = 11;
+  PluginVersion HostSubVersion = 12;
+  PluginVersion MinSystemVersion = 13;
+  PluginVersion LanguageVersion = 14;
+}
+
+message PluginFullDescriptor{
+  PluginDescriptor Application = 1;
+
+  string Configuration = 20;
+  bytes Certificate = 30;
+}
+
+message PluginInstanceDescriptor{
+  PluginDescriptor Application = 1;
+  string InstanceID = 2;
+  string HostID = 3;
+  string OrganizationUUID = 10;
+  string TeamUUID = 11;
+}
+
+message HeaderVal {
+    repeated string val = 1;
+}
+
+message HttpRequestMessage{
+  string Method = 1;
+  string Url = 2;
+  map<string, HeaderVal>  Headers = 3;
+  string Body = 4;
+  bool   Root = 5;
+  bool   Internal = 6;
+}
+
+message HttpResponseMessage {
+  int64 StatusCode = 1;
+  map<string, HeaderVal>  Headers = 2;
+  string Body = 3;
+  ErrorMessage Error  = 4;
+}
+
+message HttpContextMessage {
+  HttpRequestMessage Request = 1;
+  HttpResponseMessage Response = 2;
+}
+
+message LogMessage{
+  enum LogLevel {
+    Info = 0;
+    Warning = 1;
+    Error = 2;
+    Fatal = 3;
+  }
+  LogLevel Level = 1;
+  string Content = 2;
+  uint64 Timestamp = 6;
+}
+
+message ErrorMessage{
+  int64 Code = 1;
+  string Error = 2;
+  string Msg = 3;
+}
+
+////////////////////////////////////////////////////////////
+message RouterNode{
+  string ID = 1;
+  map<string, string> Tags = 2;
+}
+
+message NodeRecord{
+  RouterNode Node = 1;
+  uint64 TimestampIn = 10;
+  uint64 TimestampOut = 11;
+  int32 HipCount = 20;
+}
+
+// 用于消息路由
+message RouterMessage{
+  // 消息来源
+  RouterNode Source = 1;
+  // 消息目标
+  // 适用与点对点的通讯协议
+  RouterNode Distinct = 2;
+
+  // 消息序列号
+  uint64 SeqNo = 10;
+
+  // 消息关联序列号列表
+  repeated uint64 RefSeqNos = 11;
+
+  // 消息传递节点清单
+  repeated NodeRecord Records = 20;
+}
+
