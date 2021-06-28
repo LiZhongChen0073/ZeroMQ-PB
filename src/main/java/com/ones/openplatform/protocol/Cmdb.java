@@ -4,54 +4,44 @@
 package com.ones.openplatform.protocol;
 
 public final class Cmdb {
-  private Cmdb() {
+  private Cmdb() {}
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
   public static void registerAllExtensions(
-      final com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-
-  public static void registerAllExtensions(
-      final com.google.protobuf.ExtensionRegistry registry) {
+      com.google.protobuf.ExtensionRegistry registry) {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-
   public interface StorageRequestMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:protocol.StorageRequestMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string Key = 1;</code>
-     *
      * @return The key.
      */
     java.lang.String getKey();
-
     /**
      * <code>string Key = 1;</code>
-     *
      * @return The bytes for key.
      */
     com.google.protobuf.ByteString
-    getKeyBytes();
+        getKeyBytes();
 
     /**
      * <code>string Value = 2;</code>
-     *
      * @return The value.
      */
     java.lang.String getValue();
-
     /**
      * <code>string Value = 2;</code>
-     *
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
-    getValueBytes();
+        getValueBytes();
   }
-
   /**
    * Protobuf type {@code protocol.StorageRequestMessage}
    */
@@ -59,22 +49,20 @@ public final class Cmdb {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:protocol.StorageRequestMessage)
       StorageRequestMessageOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     // Use StorageRequestMessage.newBuilder() to construct.
-    private StorageRequestMessage(final com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private StorageRequestMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private StorageRequestMessage() {
-      this.key_ = "";
-      this.value_ = "";
+      key_ = "";
+      value_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        final UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new StorageRequestMessage();
     }
 
@@ -83,39 +71,38 @@ public final class Cmdb {
     getUnknownFields() {
       return this.unknownFields;
     }
-
     private StorageRequestMessage(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      final com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
-          final int tag = input.readTag();
+          int tag = input.readTag();
           switch (tag) {
             case 0:
               done = true;
               break;
             case 10: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.key_ = s;
+              key_ = s;
               break;
             }
             case 18: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.value_ = s;
+              value_ = s;
               break;
             }
             default: {
-              if (!this.parseUnknownField(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -123,25 +110,24 @@ public final class Cmdb {
             }
           }
         }
-      } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (final java.io.IOException e) {
+      } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
-        this.makeExtensionsImmutable();
+        makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageRequestMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageRequestMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.class, com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder.class);
@@ -149,40 +135,36 @@ public final class Cmdb {
 
     public static final int KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object key_;
-
     /**
      * <code>string Key = 1;</code>
-     *
      * @return The key.
      */
     @java.lang.Override
     public java.lang.String getKey() {
-      final java.lang.Object ref = this.key_;
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.key_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
         return s;
       }
     }
-
     /**
      * <code>string Key = 1;</code>
-     *
      * @return The bytes for key.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getKeyBytes() {
-      final java.lang.Object ref = this.key_;
+        getKeyBytes() {
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.key_ = b;
+        key_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -191,40 +173,36 @@ public final class Cmdb {
 
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
-
     /**
      * <code>string Value = 2;</code>
-     *
      * @return The value.
      */
     @java.lang.Override
     public java.lang.String getValue() {
-      final java.lang.Object ref = this.value_;
+      java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.value_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
         return s;
       }
     }
-
     /**
      * <code>string Value = 2;</code>
-     *
      * @return The bytes for value.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getValueBytes() {
-      final java.lang.Object ref = this.value_;
+        getValueBytes() {
+      java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.value_ = b;
+        value_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -232,186 +210,157 @@ public final class Cmdb {
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
-      final byte isInitialized = this.memoizedIsInitialized;
-      if (isInitialized == 1) {
-        return true;
-      }
-      if (isInitialized == 0) {
-        return false;
-      }
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      this.memoizedIsInitialized = 1;
+      memoizedIsInitialized = 1;
       return true;
     }
 
     @java.lang.Override
-    public void writeTo(final com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
-      if (!this.getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, this.key_);
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
-      if (!this.getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, this.value_);
+      if (!getValueBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
       }
-      this.unknownFields.writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
     public int getSerializedSize() {
-      int size = this.memoizedSize;
-      if (size != -1) {
-        return size;
-      }
+      int size = memoizedSize;
+      if (size != -1) return size;
 
       size = 0;
-      if (!this.getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, this.key_);
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
-      if (!this.getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, this.value_);
+      if (!getValueBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
       }
-      size += this.unknownFields.getSerializedSize();
-      this.memoizedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.ones.openplatform.protocol.Cmdb.StorageRequestMessage)) {
         return super.equals(obj);
       }
-      final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage other = (com.ones.openplatform.protocol.Cmdb.StorageRequestMessage) obj;
+      com.ones.openplatform.protocol.Cmdb.StorageRequestMessage other = (com.ones.openplatform.protocol.Cmdb.StorageRequestMessage) obj;
 
-      if (!this.getKey()
-          .equals(other.getKey())) {
-        return false;
-      }
-      if (!this.getValue()
-          .equals(other.getValue())) {
-        return false;
-      }
-      if (!this.unknownFields.equals(other.unknownFields)) {
-        return false;
-      }
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
     @java.lang.Override
     public int hashCode() {
-      if (this.memoizedHashCode != 0) {
-        return this.memoizedHashCode;
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + this.getKey().hashCode();
+      hash = (53 * hash) + getKey().hashCode();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + this.getValue().hashCode();
-      hash = (29 * hash) + this.unknownFields.hashCode();
-      this.memoizedHashCode = hash;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
       return hash;
     }
 
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final java.nio.ByteBuffer data)
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final java.nio.ByteBuffer data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final com.google.protobuf.ByteString data)
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final com.google.protobuf.ByteString data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(final byte[] data)
+    public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final byte[] data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseDelimitedFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseDelimitedFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage prototype) {
+    public static Builder newBuilder(com.ones.openplatform.protocol.Cmdb.StorageRequestMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -420,11 +369,10 @@ public final class Cmdb {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      final Builder builder = new Builder(parent);
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code protocol.StorageRequestMessage}
      */
@@ -433,13 +381,13 @@ public final class Cmdb {
         // @@protoc_insertion_point(builder_implements:protocol.StorageRequestMessage)
         com.ones.openplatform.protocol.Cmdb.StorageRequestMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageRequestMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageRequestMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.class, com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder.class);
@@ -447,34 +395,32 @@ public final class Cmdb {
 
       // Construct using com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.newBuilder()
       private Builder() {
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
-          final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
+                .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        this.key_ = "";
+        key_ = "";
 
-        this.value_ = "";
+        value_ = "";
 
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageRequestMessage_descriptor;
       }
 
@@ -485,7 +431,7 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.StorageRequestMessage build() {
-        final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage result = this.buildPartial();
+        com.ones.openplatform.protocol.Cmdb.StorageRequestMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -494,10 +440,10 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.StorageRequestMessage buildPartial() {
-        final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage result = new com.ones.openplatform.protocol.Cmdb.StorageRequestMessage(this);
-        result.key_ = this.key_;
-        result.value_ = this.value_;
-        this.onBuilt();
+        com.ones.openplatform.protocol.Cmdb.StorageRequestMessage result = new com.ones.openplatform.protocol.Cmdb.StorageRequestMessage(this);
+        result.key_ = key_;
+        result.value_ = value_;
+        onBuilt();
         return result;
       }
 
@@ -505,64 +451,56 @@ public final class Cmdb {
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
       public Builder clearField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
       public Builder clearOneof(
-          final com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final int index, final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
-      public Builder mergeFrom(final com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.ones.openplatform.protocol.Cmdb.StorageRequestMessage) {
-          return this.mergeFrom((com.ones.openplatform.protocol.Cmdb.StorageRequestMessage) other);
+          return mergeFrom((com.ones.openplatform.protocol.Cmdb.StorageRequestMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage other) {
-        if (other == com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance()) {
-          return this;
-        }
+      public Builder mergeFrom(com.ones.openplatform.protocol.Cmdb.StorageRequestMessage other) {
+        if (other == com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance()) return this;
         if (!other.getKey().isEmpty()) {
-          this.key_ = other.key_;
-          this.onChanged();
+          key_ = other.key_;
+          onChanged();
         }
         if (!other.getValue().isEmpty()) {
-          this.value_ = other.value_;
-          this.onChanged();
+          value_ = other.value_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
-        this.onChanged();
+        onChanged();
         return this;
       }
 
@@ -573,199 +511,174 @@ public final class Cmdb {
 
       @java.lang.Override
       public Builder mergeFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.ones.openplatform.protocol.Cmdb.StorageRequestMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.ones.openplatform.protocol.Cmdb.StorageRequestMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
-            this.mergeFrom(parsedMessage);
+            mergeFrom(parsedMessage);
           }
         }
         return this;
       }
 
       private java.lang.Object key_ = "";
-
       /**
        * <code>string Key = 1;</code>
-       *
        * @return The key.
        */
-      @Override
       public java.lang.String getKey() {
-        final java.lang.Object ref = this.key_;
+        java.lang.Object ref = key_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.key_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string Key = 1;</code>
-       *
        * @return The bytes for key.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getKeyBytes() {
-        final java.lang.Object ref = this.key_;
+          getKeyBytes() {
+        java.lang.Object ref = key_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.key_ = b;
+          key_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string Key = 1;</code>
-       *
        * @param value The key to set.
        * @return This builder for chaining.
        */
       public Builder setKey(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.key_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Key = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearKey() {
-
-        this.key_ = getDefaultInstance().getKey();
-        this.onChanged();
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Key = 1;</code>
-       *
        * @param value The bytes for key to set.
        * @return This builder for chaining.
        */
       public Builder setKeyBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.key_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
         return this;
       }
 
       private java.lang.Object value_ = "";
-
       /**
        * <code>string Value = 2;</code>
-       *
        * @return The value.
        */
-      @Override
       public java.lang.String getValue() {
-        final java.lang.Object ref = this.value_;
+        java.lang.Object ref = value_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.value_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string Value = 2;</code>
-       *
        * @return The bytes for value.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getValueBytes() {
-        final java.lang.Object ref = this.value_;
+          getValueBytes() {
+        java.lang.Object ref = value_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.value_ = b;
+          value_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string Value = 2;</code>
-       *
        * @param value The value to set.
        * @return This builder for chaining.
        */
       public Builder setValue(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.value_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Value = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-
-        this.value_ = getDefaultInstance().getValue();
-        this.onChanged();
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Value = 2;</code>
-       *
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
       public Builder setValueBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.value_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        value_ = value;
+        onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -778,12 +691,12 @@ public final class Cmdb {
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:protocol.StorageRequestMessage)
     }
 
     // @@protoc_insertion_point(class_scope:protocol.StorageRequestMessage)
     private static final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.ones.openplatform.protocol.Cmdb.StorageRequestMessage();
     }
@@ -796,8 +709,8 @@ public final class Cmdb {
         PARSER = new com.google.protobuf.AbstractParser<StorageRequestMessage>() {
       @java.lang.Override
       public StorageRequestMessage parsePartialFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new StorageRequestMessage(input, extensionRegistry);
       }
@@ -825,18 +738,14 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return Whether the error field is set.
      */
     boolean hasError();
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return The error.
      */
     com.ones.openplatform.protocol.Common.ErrorMessage getError();
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
      */
@@ -844,20 +753,16 @@ public final class Cmdb {
 
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The result.
      */
     java.lang.String getResult();
-
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The bytes for result.
      */
     com.google.protobuf.ByteString
-    getResultBytes();
+        getResultBytes();
   }
-
   /**
    * Protobuf type {@code protocol.StorageResponseMessage}
    */
@@ -865,21 +770,19 @@ public final class Cmdb {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:protocol.StorageResponseMessage)
       StorageResponseMessageOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     // Use StorageResponseMessage.newBuilder() to construct.
-    private StorageResponseMessage(final com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private StorageResponseMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private StorageResponseMessage() {
-      this.result_ = "";
+      result_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        final UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new StorageResponseMessage();
     }
 
@@ -888,46 +791,45 @@ public final class Cmdb {
     getUnknownFields() {
       return this.unknownFields;
     }
-
     private StorageResponseMessage(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      final com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
-          final int tag = input.readTag();
+          int tag = input.readTag();
           switch (tag) {
             case 0:
               done = true;
               break;
             case 10: {
               com.ones.openplatform.protocol.Common.ErrorMessage.Builder subBuilder = null;
-              if (this.error_ != null) {
-                subBuilder = this.error_.toBuilder();
+              if (error_ != null) {
+                subBuilder = error_.toBuilder();
               }
-              this.error_ = input.readMessage(com.ones.openplatform.protocol.Common.ErrorMessage.parser(), extensionRegistry);
+              error_ = input.readMessage(com.ones.openplatform.protocol.Common.ErrorMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.error_);
-                this.error_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(error_);
+                error_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 18: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.result_ = s;
+              result_ = s;
               break;
             }
             default: {
-              if (!this.parseUnknownField(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -935,25 +837,24 @@ public final class Cmdb {
             }
           }
         }
-      } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (final java.io.IOException e) {
+      } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
-        this.makeExtensionsImmutable();
+        makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageResponseMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageResponseMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.class, com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder.class);
@@ -961,71 +862,62 @@ public final class Cmdb {
 
     public static final int ERROR_FIELD_NUMBER = 1;
     private com.ones.openplatform.protocol.Common.ErrorMessage error_;
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return Whether the error field is set.
      */
     @java.lang.Override
     public boolean hasError() {
-      return this.error_ != null;
+      return error_ != null;
     }
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return The error.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.ErrorMessage getError() {
-      return this.error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : this.error_;
+      return error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : error_;
     }
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder getErrorOrBuilder() {
-      return this.getError();
+      return getError();
     }
 
     public static final int RESULT_FIELD_NUMBER = 2;
     private volatile java.lang.Object result_;
-
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The result.
      */
     @java.lang.Override
     public java.lang.String getResult() {
-      final java.lang.Object ref = this.result_;
+      java.lang.Object ref = result_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.result_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        result_ = s;
         return s;
       }
     }
-
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The bytes for result.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getResultBytes() {
-      final java.lang.Object ref = this.result_;
+        getResultBytes() {
+      java.lang.Object ref = result_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.result_ = b;
+        result_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1033,194 +925,163 @@ public final class Cmdb {
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
-      final byte isInitialized = this.memoizedIsInitialized;
-      if (isInitialized == 1) {
-        return true;
-      }
-      if (isInitialized == 0) {
-        return false;
-      }
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      this.memoizedIsInitialized = 1;
+      memoizedIsInitialized = 1;
       return true;
     }
 
     @java.lang.Override
-    public void writeTo(final com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
-      if (this.error_ != null) {
-        output.writeMessage(1, this.getError());
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (error_ != null) {
+        output.writeMessage(1, getError());
       }
-      if (!this.getResultBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, this.result_);
+      if (!getResultBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, result_);
       }
-      this.unknownFields.writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
     public int getSerializedSize() {
-      int size = this.memoizedSize;
-      if (size != -1) {
-        return size;
-      }
+      int size = memoizedSize;
+      if (size != -1) return size;
 
       size = 0;
-      if (this.error_ != null) {
+      if (error_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, this.getError());
+          .computeMessageSize(1, getError());
       }
-      if (!this.getResultBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, this.result_);
+      if (!getResultBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, result_);
       }
-      size += this.unknownFields.getSerializedSize();
-      this.memoizedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.ones.openplatform.protocol.Cmdb.StorageResponseMessage)) {
         return super.equals(obj);
       }
-      final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage other = (com.ones.openplatform.protocol.Cmdb.StorageResponseMessage) obj;
+      com.ones.openplatform.protocol.Cmdb.StorageResponseMessage other = (com.ones.openplatform.protocol.Cmdb.StorageResponseMessage) obj;
 
-      if (this.hasError() != other.hasError()) {
-        return false;
+      if (hasError() != other.hasError()) return false;
+      if (hasError()) {
+        if (!getError()
+            .equals(other.getError())) return false;
       }
-      if (this.hasError()) {
-        if (!this.getError()
-            .equals(other.getError())) {
-          return false;
-        }
-      }
-      if (!this.getResult()
-          .equals(other.getResult())) {
-        return false;
-      }
-      if (!this.unknownFields.equals(other.unknownFields)) {
-        return false;
-      }
+      if (!getResult()
+          .equals(other.getResult())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
     @java.lang.Override
     public int hashCode() {
-      if (this.memoizedHashCode != 0) {
-        return this.memoizedHashCode;
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (this.hasError()) {
+      if (hasError()) {
         hash = (37 * hash) + ERROR_FIELD_NUMBER;
-        hash = (53 * hash) + this.getError().hashCode();
+        hash = (53 * hash) + getError().hashCode();
       }
       hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + this.getResult().hashCode();
-      hash = (29 * hash) + this.unknownFields.hashCode();
-      this.memoizedHashCode = hash;
+      hash = (53 * hash) + getResult().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
       return hash;
     }
 
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final java.nio.ByteBuffer data)
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final java.nio.ByteBuffer data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final com.google.protobuf.ByteString data)
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final com.google.protobuf.ByteString data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(final byte[] data)
+    public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final byte[] data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseDelimitedFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseDelimitedFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage prototype) {
+    public static Builder newBuilder(com.ones.openplatform.protocol.Cmdb.StorageResponseMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -1229,11 +1090,10 @@ public final class Cmdb {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      final Builder builder = new Builder(parent);
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code protocol.StorageResponseMessage}
      */
@@ -1242,13 +1102,13 @@ public final class Cmdb {
         // @@protoc_insertion_point(builder_implements:protocol.StorageResponseMessage)
         com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageResponseMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageResponseMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.class, com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder.class);
@@ -1256,38 +1116,36 @@ public final class Cmdb {
 
       // Construct using com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.newBuilder()
       private Builder() {
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
-          final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
+                .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (this.errorBuilder_ == null) {
-          this.error_ = null;
+        if (errorBuilder_ == null) {
+          error_ = null;
         } else {
-          this.error_ = null;
-          this.errorBuilder_ = null;
+          error_ = null;
+          errorBuilder_ = null;
         }
-        this.result_ = "";
+        result_ = "";
 
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageResponseMessage_descriptor;
       }
 
@@ -1298,7 +1156,7 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.StorageResponseMessage build() {
-        final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage result = this.buildPartial();
+        com.ones.openplatform.protocol.Cmdb.StorageResponseMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1307,14 +1165,14 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.StorageResponseMessage buildPartial() {
-        final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage result = new com.ones.openplatform.protocol.Cmdb.StorageResponseMessage(this);
-        if (this.errorBuilder_ == null) {
-          result.error_ = this.error_;
+        com.ones.openplatform.protocol.Cmdb.StorageResponseMessage result = new com.ones.openplatform.protocol.Cmdb.StorageResponseMessage(this);
+        if (errorBuilder_ == null) {
+          result.error_ = error_;
         } else {
-          result.error_ = this.errorBuilder_.build();
+          result.error_ = errorBuilder_.build();
         }
-        result.result_ = this.result_;
-        this.onBuilt();
+        result.result_ = result_;
+        onBuilt();
         return result;
       }
 
@@ -1322,63 +1180,55 @@ public final class Cmdb {
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
       public Builder clearField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
       public Builder clearOneof(
-          final com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final int index, final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
-      public Builder mergeFrom(final com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.ones.openplatform.protocol.Cmdb.StorageResponseMessage) {
-          return this.mergeFrom((com.ones.openplatform.protocol.Cmdb.StorageResponseMessage) other);
+          return mergeFrom((com.ones.openplatform.protocol.Cmdb.StorageResponseMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage other) {
-        if (other == com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance()) {
-          return this;
-        }
+      public Builder mergeFrom(com.ones.openplatform.protocol.Cmdb.StorageResponseMessage other) {
+        if (other == com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance()) return this;
         if (other.hasError()) {
-          this.mergeError(other.getError());
+          mergeError(other.getError());
         }
         if (!other.getResult().isEmpty()) {
-          this.result_ = other.result_;
-          this.onChanged();
+          result_ = other.result_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
-        this.onChanged();
+        onChanged();
         return this;
       }
 
@@ -1389,18 +1239,18 @@ public final class Cmdb {
 
       @java.lang.Override
       public Builder mergeFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.ones.openplatform.protocol.Cmdb.StorageResponseMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.ones.openplatform.protocol.Cmdb.StorageResponseMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
-            this.mergeFrom(parsedMessage);
+            mergeFrom(parsedMessage);
           }
         }
         return this;
@@ -1409,224 +1259,197 @@ public final class Cmdb {
       private com.ones.openplatform.protocol.Common.ErrorMessage error_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder> errorBuilder_;
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
-       *
        * @return Whether the error field is set.
        */
-      @Override
       public boolean hasError() {
-        return this.errorBuilder_ != null || this.error_ != null;
+        return errorBuilder_ != null || error_ != null;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
-       *
        * @return The error.
        */
-      @Override
       public com.ones.openplatform.protocol.Common.ErrorMessage getError() {
-        if (this.errorBuilder_ == null) {
-          return this.error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : this.error_;
+        if (errorBuilder_ == null) {
+          return error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : error_;
         } else {
-          return this.errorBuilder_.getMessage();
+          return errorBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
-      public Builder setError(final com.ones.openplatform.protocol.Common.ErrorMessage value) {
-        if (this.errorBuilder_ == null) {
+      public Builder setError(com.ones.openplatform.protocol.Common.ErrorMessage value) {
+        if (errorBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.error_ = value;
-          this.onChanged();
+          error_ = value;
+          onChanged();
         } else {
-          this.errorBuilder_.setMessage(value);
+          errorBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       public Builder setError(
-          final com.ones.openplatform.protocol.Common.ErrorMessage.Builder builderForValue) {
-        if (this.errorBuilder_ == null) {
-          this.error_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Common.ErrorMessage.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          error_ = builderForValue.build();
+          onChanged();
         } else {
-          this.errorBuilder_.setMessage(builderForValue.build());
+          errorBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
-      public Builder mergeError(final com.ones.openplatform.protocol.Common.ErrorMessage value) {
-        if (this.errorBuilder_ == null) {
-          if (this.error_ != null) {
-            this.error_ =
-                com.ones.openplatform.protocol.Common.ErrorMessage.newBuilder(this.error_).mergeFrom(value).buildPartial();
+      public Builder mergeError(com.ones.openplatform.protocol.Common.ErrorMessage value) {
+        if (errorBuilder_ == null) {
+          if (error_ != null) {
+            error_ =
+              com.ones.openplatform.protocol.Common.ErrorMessage.newBuilder(error_).mergeFrom(value).buildPartial();
           } else {
-            this.error_ = value;
+            error_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.errorBuilder_.mergeFrom(value);
+          errorBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       public Builder clearError() {
-        if (this.errorBuilder_ == null) {
-          this.error_ = null;
-          this.onChanged();
+        if (errorBuilder_ == null) {
+          error_ = null;
+          onChanged();
         } else {
-          this.error_ = null;
-          this.errorBuilder_ = null;
+          error_ = null;
+          errorBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       public com.ones.openplatform.protocol.Common.ErrorMessage.Builder getErrorBuilder() {
-
-        this.onChanged();
-        return this.getErrorFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getErrorFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder getErrorOrBuilder() {
-        if (this.errorBuilder_ != null) {
-          return this.errorBuilder_.getMessageOrBuilder();
+        if (errorBuilder_ != null) {
+          return errorBuilder_.getMessageOrBuilder();
         } else {
-          return this.error_ == null ?
-              com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : this.error_;
+          return error_ == null ?
+              com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : error_;
         }
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder>
-      getErrorFieldBuilder() {
-        if (this.errorBuilder_ == null) {
-          this.errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder> 
+          getErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder>(
-              this.getError(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.error_ = null;
+                  getError(),
+                  getParentForChildren(),
+                  isClean());
+          error_ = null;
         }
-        return this.errorBuilder_;
+        return errorBuilder_;
       }
 
       private java.lang.Object result_ = "";
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @return The result.
        */
-      @Override
       public java.lang.String getResult() {
-        final java.lang.Object ref = this.result_;
+        java.lang.Object ref = result_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.result_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          result_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @return The bytes for result.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getResultBytes() {
-        final java.lang.Object ref = this.result_;
+          getResultBytes() {
+        java.lang.Object ref = result_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.result_ = b;
+          result_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @param value The result to set.
        * @return This builder for chaining.
        */
       public Builder setResult(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.result_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        result_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearResult() {
-
-        this.result_ = getDefaultInstance().getResult();
-        this.onChanged();
+        
+        result_ = getDefaultInstance().getResult();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @param value The bytes for result to set.
        * @return This builder for chaining.
        */
       public Builder setResultBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.result_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        result_ = value;
+        onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1639,12 +1462,12 @@ public final class Cmdb {
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:protocol.StorageResponseMessage)
     }
 
     // @@protoc_insertion_point(class_scope:protocol.StorageResponseMessage)
     private static final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.ones.openplatform.protocol.Cmdb.StorageResponseMessage();
     }
@@ -1657,8 +1480,8 @@ public final class Cmdb {
         PARSER = new com.google.protobuf.AbstractParser<StorageResponseMessage>() {
       @java.lang.Override
       public StorageResponseMessage parsePartialFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new StorageResponseMessage(input, extensionRegistry);
       }
@@ -1686,18 +1509,14 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
-     *
      * @return Whether the storageRequest field is set.
      */
     boolean hasStorageRequest();
-
     /**
      * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
-     *
      * @return The storageRequest.
      */
     com.ones.openplatform.protocol.Cmdb.StorageRequestMessage getStorageRequest();
-
     /**
      * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
      */
@@ -1705,24 +1524,19 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
-     *
      * @return Whether the storageResponse field is set.
      */
     boolean hasStorageResponse();
-
     /**
      * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
-     *
      * @return The storageResponse.
      */
     com.ones.openplatform.protocol.Cmdb.StorageResponseMessage getStorageResponse();
-
     /**
      * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
      */
     com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder getStorageResponseOrBuilder();
   }
-
   /**
    * Protobuf type {@code protocol.StorageMessage}
    */
@@ -1730,20 +1544,18 @@ public final class Cmdb {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:protocol.StorageMessage)
       StorageMessageOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     // Use StorageMessage.newBuilder() to construct.
-    private StorageMessage(final com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private StorageMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private StorageMessage() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        final UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new StorageMessage();
     }
 
@@ -1752,53 +1564,52 @@ public final class Cmdb {
     getUnknownFields() {
       return this.unknownFields;
     }
-
     private StorageMessage(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      final com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
-          final int tag = input.readTag();
+          int tag = input.readTag();
           switch (tag) {
             case 0:
               done = true;
               break;
             case 10: {
               com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder subBuilder = null;
-              if (this.storageRequest_ != null) {
-                subBuilder = this.storageRequest_.toBuilder();
+              if (storageRequest_ != null) {
+                subBuilder = storageRequest_.toBuilder();
               }
-              this.storageRequest_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.parser(), extensionRegistry);
+              storageRequest_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.storageRequest_);
-                this.storageRequest_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(storageRequest_);
+                storageRequest_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 18: {
               com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder subBuilder = null;
-              if (this.storageResponse_ != null) {
-                subBuilder = this.storageResponse_.toBuilder();
+              if (storageResponse_ != null) {
+                subBuilder = storageResponse_.toBuilder();
               }
-              this.storageResponse_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.parser(), extensionRegistry);
+              storageResponse_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.storageResponse_);
-                this.storageResponse_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(storageResponse_);
+                storageResponse_ = subBuilder.buildPartial();
               }
 
               break;
             }
             default: {
-              if (!this.parseUnknownField(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1806,25 +1617,24 @@ public final class Cmdb {
             }
           }
         }
-      } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (final java.io.IOException e) {
+      } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
-        this.makeExtensionsImmutable();
+        makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ones.openplatform.protocol.Cmdb.StorageMessage.class, com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder.class);
@@ -1832,263 +1642,220 @@ public final class Cmdb {
 
     public static final int STORAGEREQUEST_FIELD_NUMBER = 1;
     private com.ones.openplatform.protocol.Cmdb.StorageRequestMessage storageRequest_;
-
     /**
      * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
-     *
      * @return Whether the storageRequest field is set.
      */
     @java.lang.Override
     public boolean hasStorageRequest() {
-      return this.storageRequest_ != null;
+      return storageRequest_ != null;
     }
-
     /**
      * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
-     *
      * @return The storageRequest.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.StorageRequestMessage getStorageRequest() {
-      return this.storageRequest_ == null ? com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance() : this.storageRequest_;
+      return storageRequest_ == null ? com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance() : storageRequest_;
     }
-
     /**
      * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.StorageRequestMessageOrBuilder getStorageRequestOrBuilder() {
-      return this.getStorageRequest();
+      return getStorageRequest();
     }
 
     public static final int STORAGERESPONSE_FIELD_NUMBER = 2;
     private com.ones.openplatform.protocol.Cmdb.StorageResponseMessage storageResponse_;
-
     /**
      * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
-     *
      * @return Whether the storageResponse field is set.
      */
     @java.lang.Override
     public boolean hasStorageResponse() {
-      return this.storageResponse_ != null;
+      return storageResponse_ != null;
     }
-
     /**
      * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
-     *
      * @return The storageResponse.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.StorageResponseMessage getStorageResponse() {
-      return this.storageResponse_ == null ? com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance() : this.storageResponse_;
+      return storageResponse_ == null ? com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance() : storageResponse_;
     }
-
     /**
      * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder getStorageResponseOrBuilder() {
-      return this.getStorageResponse();
+      return getStorageResponse();
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
-      final byte isInitialized = this.memoizedIsInitialized;
-      if (isInitialized == 1) {
-        return true;
-      }
-      if (isInitialized == 0) {
-        return false;
-      }
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      this.memoizedIsInitialized = 1;
+      memoizedIsInitialized = 1;
       return true;
     }
 
     @java.lang.Override
-    public void writeTo(final com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
-      if (this.storageRequest_ != null) {
-        output.writeMessage(1, this.getStorageRequest());
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (storageRequest_ != null) {
+        output.writeMessage(1, getStorageRequest());
       }
-      if (this.storageResponse_ != null) {
-        output.writeMessage(2, this.getStorageResponse());
+      if (storageResponse_ != null) {
+        output.writeMessage(2, getStorageResponse());
       }
-      this.unknownFields.writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
     public int getSerializedSize() {
-      int size = this.memoizedSize;
-      if (size != -1) {
-        return size;
-      }
+      int size = memoizedSize;
+      if (size != -1) return size;
 
       size = 0;
-      if (this.storageRequest_ != null) {
+      if (storageRequest_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, this.getStorageRequest());
+          .computeMessageSize(1, getStorageRequest());
       }
-      if (this.storageResponse_ != null) {
+      if (storageResponse_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, this.getStorageResponse());
+          .computeMessageSize(2, getStorageResponse());
       }
-      size += this.unknownFields.getSerializedSize();
-      this.memoizedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.ones.openplatform.protocol.Cmdb.StorageMessage)) {
         return super.equals(obj);
       }
-      final com.ones.openplatform.protocol.Cmdb.StorageMessage other = (com.ones.openplatform.protocol.Cmdb.StorageMessage) obj;
+      com.ones.openplatform.protocol.Cmdb.StorageMessage other = (com.ones.openplatform.protocol.Cmdb.StorageMessage) obj;
 
-      if (this.hasStorageRequest() != other.hasStorageRequest()) {
-        return false;
+      if (hasStorageRequest() != other.hasStorageRequest()) return false;
+      if (hasStorageRequest()) {
+        if (!getStorageRequest()
+            .equals(other.getStorageRequest())) return false;
       }
-      if (this.hasStorageRequest()) {
-        if (!this.getStorageRequest()
-            .equals(other.getStorageRequest())) {
-          return false;
-        }
+      if (hasStorageResponse() != other.hasStorageResponse()) return false;
+      if (hasStorageResponse()) {
+        if (!getStorageResponse()
+            .equals(other.getStorageResponse())) return false;
       }
-      if (this.hasStorageResponse() != other.hasStorageResponse()) {
-        return false;
-      }
-      if (this.hasStorageResponse()) {
-        if (!this.getStorageResponse()
-            .equals(other.getStorageResponse())) {
-          return false;
-        }
-      }
-      if (!this.unknownFields.equals(other.unknownFields)) {
-        return false;
-      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
     @java.lang.Override
     public int hashCode() {
-      if (this.memoizedHashCode != 0) {
-        return this.memoizedHashCode;
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (this.hasStorageRequest()) {
+      if (hasStorageRequest()) {
         hash = (37 * hash) + STORAGEREQUEST_FIELD_NUMBER;
-        hash = (53 * hash) + this.getStorageRequest().hashCode();
+        hash = (53 * hash) + getStorageRequest().hashCode();
       }
-      if (this.hasStorageResponse()) {
+      if (hasStorageResponse()) {
         hash = (37 * hash) + STORAGERESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + this.getStorageResponse().hashCode();
+        hash = (53 * hash) + getStorageResponse().hashCode();
       }
-      hash = (29 * hash) + this.unknownFields.hashCode();
-      this.memoizedHashCode = hash;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
       return hash;
     }
 
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final java.nio.ByteBuffer data)
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final java.nio.ByteBuffer data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final com.google.protobuf.ByteString data)
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final com.google.protobuf.ByteString data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(final byte[] data)
+    public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final byte[] data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseDelimitedFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseDelimitedFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.StorageMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(final com.ones.openplatform.protocol.Cmdb.StorageMessage prototype) {
+    public static Builder newBuilder(com.ones.openplatform.protocol.Cmdb.StorageMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -2097,11 +1864,10 @@ public final class Cmdb {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      final Builder builder = new Builder(parent);
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code protocol.StorageMessage}
      */
@@ -2110,13 +1876,13 @@ public final class Cmdb {
         // @@protoc_insertion_point(builder_implements:protocol.StorageMessage)
         com.ones.openplatform.protocol.Cmdb.StorageMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.ones.openplatform.protocol.Cmdb.StorageMessage.class, com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder.class);
@@ -2124,42 +1890,40 @@ public final class Cmdb {
 
       // Construct using com.ones.openplatform.protocol.Cmdb.StorageMessage.newBuilder()
       private Builder() {
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
-          final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
+                .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (this.storageRequestBuilder_ == null) {
-          this.storageRequest_ = null;
+        if (storageRequestBuilder_ == null) {
+          storageRequest_ = null;
         } else {
-          this.storageRequest_ = null;
-          this.storageRequestBuilder_ = null;
+          storageRequest_ = null;
+          storageRequestBuilder_ = null;
         }
-        if (this.storageResponseBuilder_ == null) {
-          this.storageResponse_ = null;
+        if (storageResponseBuilder_ == null) {
+          storageResponse_ = null;
         } else {
-          this.storageResponse_ = null;
-          this.storageResponseBuilder_ = null;
+          storageResponse_ = null;
+          storageResponseBuilder_ = null;
         }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_StorageMessage_descriptor;
       }
 
@@ -2170,7 +1934,7 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.StorageMessage build() {
-        final com.ones.openplatform.protocol.Cmdb.StorageMessage result = this.buildPartial();
+        com.ones.openplatform.protocol.Cmdb.StorageMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2179,18 +1943,18 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.StorageMessage buildPartial() {
-        final com.ones.openplatform.protocol.Cmdb.StorageMessage result = new com.ones.openplatform.protocol.Cmdb.StorageMessage(this);
-        if (this.storageRequestBuilder_ == null) {
-          result.storageRequest_ = this.storageRequest_;
+        com.ones.openplatform.protocol.Cmdb.StorageMessage result = new com.ones.openplatform.protocol.Cmdb.StorageMessage(this);
+        if (storageRequestBuilder_ == null) {
+          result.storageRequest_ = storageRequest_;
         } else {
-          result.storageRequest_ = this.storageRequestBuilder_.build();
+          result.storageRequest_ = storageRequestBuilder_.build();
         }
-        if (this.storageResponseBuilder_ == null) {
-          result.storageResponse_ = this.storageResponse_;
+        if (storageResponseBuilder_ == null) {
+          result.storageResponse_ = storageResponse_;
         } else {
-          result.storageResponse_ = this.storageResponseBuilder_.build();
+          result.storageResponse_ = storageResponseBuilder_.build();
         }
-        this.onBuilt();
+        onBuilt();
         return result;
       }
 
@@ -2198,62 +1962,54 @@ public final class Cmdb {
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
       public Builder clearField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
       public Builder clearOneof(
-          final com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final int index, final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
-      public Builder mergeFrom(final com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.ones.openplatform.protocol.Cmdb.StorageMessage) {
-          return this.mergeFrom((com.ones.openplatform.protocol.Cmdb.StorageMessage) other);
+          return mergeFrom((com.ones.openplatform.protocol.Cmdb.StorageMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(final com.ones.openplatform.protocol.Cmdb.StorageMessage other) {
-        if (other == com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance()) {
-          return this;
-        }
+      public Builder mergeFrom(com.ones.openplatform.protocol.Cmdb.StorageMessage other) {
+        if (other == com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance()) return this;
         if (other.hasStorageRequest()) {
-          this.mergeStorageRequest(other.getStorageRequest());
+          mergeStorageRequest(other.getStorageRequest());
         }
         if (other.hasStorageResponse()) {
-          this.mergeStorageResponse(other.getStorageResponse());
+          mergeStorageResponse(other.getStorageResponse());
         }
         this.mergeUnknownFields(other.unknownFields);
-        this.onChanged();
+        onChanged();
         return this;
       }
 
@@ -2264,18 +2020,18 @@ public final class Cmdb {
 
       @java.lang.Override
       public Builder mergeFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.ones.openplatform.protocol.Cmdb.StorageMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.ones.openplatform.protocol.Cmdb.StorageMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
-            this.mergeFrom(parsedMessage);
+            mergeFrom(parsedMessage);
           }
         }
         return this;
@@ -2284,269 +2040,240 @@ public final class Cmdb {
       private com.ones.openplatform.protocol.Cmdb.StorageRequestMessage storageRequest_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Cmdb.StorageRequestMessage, com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageRequestMessageOrBuilder> storageRequestBuilder_;
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
-       *
        * @return Whether the storageRequest field is set.
        */
-      @Override
       public boolean hasStorageRequest() {
-        return this.storageRequestBuilder_ != null || this.storageRequest_ != null;
+        return storageRequestBuilder_ != null || storageRequest_ != null;
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
-       *
        * @return The storageRequest.
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.StorageRequestMessage getStorageRequest() {
-        if (this.storageRequestBuilder_ == null) {
-          return this.storageRequest_ == null ? com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance() : this.storageRequest_;
+        if (storageRequestBuilder_ == null) {
+          return storageRequest_ == null ? com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance() : storageRequest_;
         } else {
-          return this.storageRequestBuilder_.getMessage();
+          return storageRequestBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
        */
-      public Builder setStorageRequest(final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage value) {
-        if (this.storageRequestBuilder_ == null) {
+      public Builder setStorageRequest(com.ones.openplatform.protocol.Cmdb.StorageRequestMessage value) {
+        if (storageRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.storageRequest_ = value;
-          this.onChanged();
+          storageRequest_ = value;
+          onChanged();
         } else {
-          this.storageRequestBuilder_.setMessage(value);
+          storageRequestBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
        */
       public Builder setStorageRequest(
-          final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder builderForValue) {
-        if (this.storageRequestBuilder_ == null) {
-          this.storageRequest_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder builderForValue) {
+        if (storageRequestBuilder_ == null) {
+          storageRequest_ = builderForValue.build();
+          onChanged();
         } else {
-          this.storageRequestBuilder_.setMessage(builderForValue.build());
+          storageRequestBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
        */
-      public Builder mergeStorageRequest(final com.ones.openplatform.protocol.Cmdb.StorageRequestMessage value) {
-        if (this.storageRequestBuilder_ == null) {
-          if (this.storageRequest_ != null) {
-            this.storageRequest_ =
-                com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.newBuilder(this.storageRequest_).mergeFrom(value).buildPartial();
+      public Builder mergeStorageRequest(com.ones.openplatform.protocol.Cmdb.StorageRequestMessage value) {
+        if (storageRequestBuilder_ == null) {
+          if (storageRequest_ != null) {
+            storageRequest_ =
+              com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.newBuilder(storageRequest_).mergeFrom(value).buildPartial();
           } else {
-            this.storageRequest_ = value;
+            storageRequest_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.storageRequestBuilder_.mergeFrom(value);
+          storageRequestBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
        */
       public Builder clearStorageRequest() {
-        if (this.storageRequestBuilder_ == null) {
-          this.storageRequest_ = null;
-          this.onChanged();
+        if (storageRequestBuilder_ == null) {
+          storageRequest_ = null;
+          onChanged();
         } else {
-          this.storageRequest_ = null;
-          this.storageRequestBuilder_ = null;
+          storageRequest_ = null;
+          storageRequestBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
        */
       public com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder getStorageRequestBuilder() {
-
-        this.onChanged();
-        return this.getStorageRequestFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getStorageRequestFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.StorageRequestMessageOrBuilder getStorageRequestOrBuilder() {
-        if (this.storageRequestBuilder_ != null) {
-          return this.storageRequestBuilder_.getMessageOrBuilder();
+        if (storageRequestBuilder_ != null) {
+          return storageRequestBuilder_.getMessageOrBuilder();
         } else {
-          return this.storageRequest_ == null ?
-              com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance() : this.storageRequest_;
+          return storageRequest_ == null ?
+              com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.getDefaultInstance() : storageRequest_;
         }
       }
-
       /**
        * <code>.protocol.StorageRequestMessage StorageRequest = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Cmdb.StorageRequestMessage, com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageRequestMessageOrBuilder>
-      getStorageRequestFieldBuilder() {
-        if (this.storageRequestBuilder_ == null) {
-          this.storageRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Cmdb.StorageRequestMessage, com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageRequestMessageOrBuilder> 
+          getStorageRequestFieldBuilder() {
+        if (storageRequestBuilder_ == null) {
+          storageRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Cmdb.StorageRequestMessage, com.ones.openplatform.protocol.Cmdb.StorageRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageRequestMessageOrBuilder>(
-              this.getStorageRequest(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.storageRequest_ = null;
+                  getStorageRequest(),
+                  getParentForChildren(),
+                  isClean());
+          storageRequest_ = null;
         }
-        return this.storageRequestBuilder_;
+        return storageRequestBuilder_;
       }
 
       private com.ones.openplatform.protocol.Cmdb.StorageResponseMessage storageResponse_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Cmdb.StorageResponseMessage, com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder> storageResponseBuilder_;
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
-       *
        * @return Whether the storageResponse field is set.
        */
-      @Override
       public boolean hasStorageResponse() {
-        return this.storageResponseBuilder_ != null || this.storageResponse_ != null;
+        return storageResponseBuilder_ != null || storageResponse_ != null;
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
-       *
        * @return The storageResponse.
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.StorageResponseMessage getStorageResponse() {
-        if (this.storageResponseBuilder_ == null) {
-          return this.storageResponse_ == null ? com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance() : this.storageResponse_;
+        if (storageResponseBuilder_ == null) {
+          return storageResponse_ == null ? com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance() : storageResponse_;
         } else {
-          return this.storageResponseBuilder_.getMessage();
+          return storageResponseBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
        */
-      public Builder setStorageResponse(final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage value) {
-        if (this.storageResponseBuilder_ == null) {
+      public Builder setStorageResponse(com.ones.openplatform.protocol.Cmdb.StorageResponseMessage value) {
+        if (storageResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.storageResponse_ = value;
-          this.onChanged();
+          storageResponse_ = value;
+          onChanged();
         } else {
-          this.storageResponseBuilder_.setMessage(value);
+          storageResponseBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
        */
       public Builder setStorageResponse(
-          final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder builderForValue) {
-        if (this.storageResponseBuilder_ == null) {
-          this.storageResponse_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder builderForValue) {
+        if (storageResponseBuilder_ == null) {
+          storageResponse_ = builderForValue.build();
+          onChanged();
         } else {
-          this.storageResponseBuilder_.setMessage(builderForValue.build());
+          storageResponseBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
        */
-      public Builder mergeStorageResponse(final com.ones.openplatform.protocol.Cmdb.StorageResponseMessage value) {
-        if (this.storageResponseBuilder_ == null) {
-          if (this.storageResponse_ != null) {
-            this.storageResponse_ =
-                com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.newBuilder(this.storageResponse_).mergeFrom(value).buildPartial();
+      public Builder mergeStorageResponse(com.ones.openplatform.protocol.Cmdb.StorageResponseMessage value) {
+        if (storageResponseBuilder_ == null) {
+          if (storageResponse_ != null) {
+            storageResponse_ =
+              com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.newBuilder(storageResponse_).mergeFrom(value).buildPartial();
           } else {
-            this.storageResponse_ = value;
+            storageResponse_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.storageResponseBuilder_.mergeFrom(value);
+          storageResponseBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
        */
       public Builder clearStorageResponse() {
-        if (this.storageResponseBuilder_ == null) {
-          this.storageResponse_ = null;
-          this.onChanged();
+        if (storageResponseBuilder_ == null) {
+          storageResponse_ = null;
+          onChanged();
         } else {
-          this.storageResponse_ = null;
-          this.storageResponseBuilder_ = null;
+          storageResponse_ = null;
+          storageResponseBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
        */
       public com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder getStorageResponseBuilder() {
-
-        this.onChanged();
-        return this.getStorageResponseFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getStorageResponseFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder getStorageResponseOrBuilder() {
-        if (this.storageResponseBuilder_ != null) {
-          return this.storageResponseBuilder_.getMessageOrBuilder();
+        if (storageResponseBuilder_ != null) {
+          return storageResponseBuilder_.getMessageOrBuilder();
         } else {
-          return this.storageResponse_ == null ?
-              com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance() : this.storageResponse_;
+          return storageResponse_ == null ?
+              com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.getDefaultInstance() : storageResponse_;
         }
       }
-
       /**
        * <code>.protocol.StorageResponseMessage StorageResponse = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Cmdb.StorageResponseMessage, com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder>
-      getStorageResponseFieldBuilder() {
-        if (this.storageResponseBuilder_ == null) {
-          this.storageResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Cmdb.StorageResponseMessage, com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder> 
+          getStorageResponseFieldBuilder() {
+        if (storageResponseBuilder_ == null) {
+          storageResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Cmdb.StorageResponseMessage, com.ones.openplatform.protocol.Cmdb.StorageResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageResponseMessageOrBuilder>(
-              this.getStorageResponse(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.storageResponse_ = null;
+                  getStorageResponse(),
+                  getParentForChildren(),
+                  isClean());
+          storageResponse_ = null;
         }
-        return this.storageResponseBuilder_;
+        return storageResponseBuilder_;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2559,12 +2286,12 @@ public final class Cmdb {
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:protocol.StorageMessage)
     }
 
     // @@protoc_insertion_point(class_scope:protocol.StorageMessage)
     private static final com.ones.openplatform.protocol.Cmdb.StorageMessage DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.ones.openplatform.protocol.Cmdb.StorageMessage();
     }
@@ -2577,8 +2304,8 @@ public final class Cmdb {
         PARSER = new com.google.protobuf.AbstractParser<StorageMessage>() {
       @java.lang.Override
       public StorageMessage parsePartialFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new StorageMessage(input, extensionRegistry);
       }
@@ -2606,65 +2333,52 @@ public final class Cmdb {
 
     /**
      * <code>string TeamUUID = 1;</code>
-     *
      * @return The teamUUID.
      */
     java.lang.String getTeamUUID();
-
     /**
      * <code>string TeamUUID = 1;</code>
-     *
      * @return The bytes for teamUUID.
      */
     com.google.protobuf.ByteString
-    getTeamUUIDBytes();
+        getTeamUUIDBytes();
 
     /**
      * <code>string TypeStr = 2;</code>
-     *
      * @return The typeStr.
      */
     java.lang.String getTypeStr();
-
     /**
      * <code>string TypeStr = 2;</code>
-     *
      * @return The bytes for typeStr.
      */
     com.google.protobuf.ByteString
-    getTypeStrBytes();
+        getTypeStrBytes();
 
     /**
      * <code>string TypeUUID = 3;</code>
-     *
      * @return The typeUUID.
      */
     java.lang.String getTypeUUID();
-
     /**
      * <code>string TypeUUID = 3;</code>
-     *
      * @return The bytes for typeUUID.
      */
     com.google.protobuf.ByteString
-    getTypeUUIDBytes();
+        getTypeUUIDBytes();
 
     /**
      * <code>string FieldKey = 4;</code>
-     *
      * @return The fieldKey.
      */
     java.lang.String getFieldKey();
-
     /**
      * <code>string FieldKey = 4;</code>
-     *
      * @return The bytes for fieldKey.
      */
     com.google.protobuf.ByteString
-    getFieldKeyBytes();
+        getFieldKeyBytes();
   }
-
   /**
    * Protobuf type {@code protocol.PropertiesRequestMessage}
    */
@@ -2672,24 +2386,22 @@ public final class Cmdb {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:protocol.PropertiesRequestMessage)
       PropertiesRequestMessageOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     // Use PropertiesRequestMessage.newBuilder() to construct.
-    private PropertiesRequestMessage(final com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PropertiesRequestMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private PropertiesRequestMessage() {
-      this.teamUUID_ = "";
-      this.typeStr_ = "";
-      this.typeUUID_ = "";
-      this.fieldKey_ = "";
+      teamUUID_ = "";
+      typeStr_ = "";
+      typeUUID_ = "";
+      fieldKey_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        final UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new PropertiesRequestMessage();
     }
 
@@ -2698,51 +2410,50 @@ public final class Cmdb {
     getUnknownFields() {
       return this.unknownFields;
     }
-
     private PropertiesRequestMessage(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      final com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
-          final int tag = input.readTag();
+          int tag = input.readTag();
           switch (tag) {
             case 0:
               done = true;
               break;
             case 10: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.teamUUID_ = s;
+              teamUUID_ = s;
               break;
             }
             case 18: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.typeStr_ = s;
+              typeStr_ = s;
               break;
             }
             case 26: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.typeUUID_ = s;
+              typeUUID_ = s;
               break;
             }
             case 34: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.fieldKey_ = s;
+              fieldKey_ = s;
               break;
             }
             default: {
-              if (!this.parseUnknownField(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2750,25 +2461,24 @@ public final class Cmdb {
             }
           }
         }
-      } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (final java.io.IOException e) {
+      } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
-        this.makeExtensionsImmutable();
+        makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesRequestMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesRequestMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.class, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder.class);
@@ -2776,40 +2486,36 @@ public final class Cmdb {
 
     public static final int TEAMUUID_FIELD_NUMBER = 1;
     private volatile java.lang.Object teamUUID_;
-
     /**
      * <code>string TeamUUID = 1;</code>
-     *
      * @return The teamUUID.
      */
     @java.lang.Override
     public java.lang.String getTeamUUID() {
-      final java.lang.Object ref = this.teamUUID_;
+      java.lang.Object ref = teamUUID_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.teamUUID_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        teamUUID_ = s;
         return s;
       }
     }
-
     /**
      * <code>string TeamUUID = 1;</code>
-     *
      * @return The bytes for teamUUID.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getTeamUUIDBytes() {
-      final java.lang.Object ref = this.teamUUID_;
+        getTeamUUIDBytes() {
+      java.lang.Object ref = teamUUID_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.teamUUID_ = b;
+        teamUUID_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2818,40 +2524,36 @@ public final class Cmdb {
 
     public static final int TYPESTR_FIELD_NUMBER = 2;
     private volatile java.lang.Object typeStr_;
-
     /**
      * <code>string TypeStr = 2;</code>
-     *
      * @return The typeStr.
      */
     @java.lang.Override
     public java.lang.String getTypeStr() {
-      final java.lang.Object ref = this.typeStr_;
+      java.lang.Object ref = typeStr_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.typeStr_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        typeStr_ = s;
         return s;
       }
     }
-
     /**
      * <code>string TypeStr = 2;</code>
-     *
      * @return The bytes for typeStr.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getTypeStrBytes() {
-      final java.lang.Object ref = this.typeStr_;
+        getTypeStrBytes() {
+      java.lang.Object ref = typeStr_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.typeStr_ = b;
+        typeStr_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2860,40 +2562,36 @@ public final class Cmdb {
 
     public static final int TYPEUUID_FIELD_NUMBER = 3;
     private volatile java.lang.Object typeUUID_;
-
     /**
      * <code>string TypeUUID = 3;</code>
-     *
      * @return The typeUUID.
      */
     @java.lang.Override
     public java.lang.String getTypeUUID() {
-      final java.lang.Object ref = this.typeUUID_;
+      java.lang.Object ref = typeUUID_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.typeUUID_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        typeUUID_ = s;
         return s;
       }
     }
-
     /**
      * <code>string TypeUUID = 3;</code>
-     *
      * @return The bytes for typeUUID.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getTypeUUIDBytes() {
-      final java.lang.Object ref = this.typeUUID_;
+        getTypeUUIDBytes() {
+      java.lang.Object ref = typeUUID_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.typeUUID_ = b;
+        typeUUID_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2902,40 +2600,36 @@ public final class Cmdb {
 
     public static final int FIELDKEY_FIELD_NUMBER = 4;
     private volatile java.lang.Object fieldKey_;
-
     /**
      * <code>string FieldKey = 4;</code>
-     *
      * @return The fieldKey.
      */
     @java.lang.Override
     public java.lang.String getFieldKey() {
-      final java.lang.Object ref = this.fieldKey_;
+      java.lang.Object ref = fieldKey_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.fieldKey_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        fieldKey_ = s;
         return s;
       }
     }
-
     /**
      * <code>string FieldKey = 4;</code>
-     *
      * @return The bytes for fieldKey.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getFieldKeyBytes() {
-      final java.lang.Object ref = this.fieldKey_;
+        getFieldKeyBytes() {
+      java.lang.Object ref = fieldKey_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.fieldKey_ = b;
+        fieldKey_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2943,210 +2637,177 @@ public final class Cmdb {
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
-      final byte isInitialized = this.memoizedIsInitialized;
-      if (isInitialized == 1) {
-        return true;
-      }
-      if (isInitialized == 0) {
-        return false;
-      }
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      this.memoizedIsInitialized = 1;
+      memoizedIsInitialized = 1;
       return true;
     }
 
     @java.lang.Override
-    public void writeTo(final com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
-      if (!this.getTeamUUIDBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, this.teamUUID_);
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTeamUUIDBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, teamUUID_);
       }
-      if (!this.getTypeStrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, this.typeStr_);
+      if (!getTypeStrBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, typeStr_);
       }
-      if (!this.getTypeUUIDBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, this.typeUUID_);
+      if (!getTypeUUIDBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, typeUUID_);
       }
-      if (!this.getFieldKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, this.fieldKey_);
+      if (!getFieldKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fieldKey_);
       }
-      this.unknownFields.writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
     public int getSerializedSize() {
-      int size = this.memoizedSize;
-      if (size != -1) {
-        return size;
-      }
+      int size = memoizedSize;
+      if (size != -1) return size;
 
       size = 0;
-      if (!this.getTeamUUIDBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, this.teamUUID_);
+      if (!getTeamUUIDBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, teamUUID_);
       }
-      if (!this.getTypeStrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, this.typeStr_);
+      if (!getTypeStrBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, typeStr_);
       }
-      if (!this.getTypeUUIDBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, this.typeUUID_);
+      if (!getTypeUUIDBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, typeUUID_);
       }
-      if (!this.getFieldKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, this.fieldKey_);
+      if (!getFieldKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fieldKey_);
       }
-      size += this.unknownFields.getSerializedSize();
-      this.memoizedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage)) {
         return super.equals(obj);
       }
-      final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage other = (com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage) obj;
+      com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage other = (com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage) obj;
 
-      if (!this.getTeamUUID()
-          .equals(other.getTeamUUID())) {
-        return false;
-      }
-      if (!this.getTypeStr()
-          .equals(other.getTypeStr())) {
-        return false;
-      }
-      if (!this.getTypeUUID()
-          .equals(other.getTypeUUID())) {
-        return false;
-      }
-      if (!this.getFieldKey()
-          .equals(other.getFieldKey())) {
-        return false;
-      }
-      if (!this.unknownFields.equals(other.unknownFields)) {
-        return false;
-      }
+      if (!getTeamUUID()
+          .equals(other.getTeamUUID())) return false;
+      if (!getTypeStr()
+          .equals(other.getTypeStr())) return false;
+      if (!getTypeUUID()
+          .equals(other.getTypeUUID())) return false;
+      if (!getFieldKey()
+          .equals(other.getFieldKey())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
     @java.lang.Override
     public int hashCode() {
-      if (this.memoizedHashCode != 0) {
-        return this.memoizedHashCode;
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TEAMUUID_FIELD_NUMBER;
-      hash = (53 * hash) + this.getTeamUUID().hashCode();
+      hash = (53 * hash) + getTeamUUID().hashCode();
       hash = (37 * hash) + TYPESTR_FIELD_NUMBER;
-      hash = (53 * hash) + this.getTypeStr().hashCode();
+      hash = (53 * hash) + getTypeStr().hashCode();
       hash = (37 * hash) + TYPEUUID_FIELD_NUMBER;
-      hash = (53 * hash) + this.getTypeUUID().hashCode();
+      hash = (53 * hash) + getTypeUUID().hashCode();
       hash = (37 * hash) + FIELDKEY_FIELD_NUMBER;
-      hash = (53 * hash) + this.getFieldKey().hashCode();
-      hash = (29 * hash) + this.unknownFields.hashCode();
-      this.memoizedHashCode = hash;
+      hash = (53 * hash) + getFieldKey().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
       return hash;
     }
 
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final java.nio.ByteBuffer data)
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final java.nio.ByteBuffer data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final com.google.protobuf.ByteString data)
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final com.google.protobuf.ByteString data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(final byte[] data)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final byte[] data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseDelimitedFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseDelimitedFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage prototype) {
+    public static Builder newBuilder(com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -3155,11 +2816,10 @@ public final class Cmdb {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      final Builder builder = new Builder(parent);
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code protocol.PropertiesRequestMessage}
      */
@@ -3168,13 +2828,13 @@ public final class Cmdb {
         // @@protoc_insertion_point(builder_implements:protocol.PropertiesRequestMessage)
         com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesRequestMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesRequestMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.class, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder.class);
@@ -3182,38 +2842,36 @@ public final class Cmdb {
 
       // Construct using com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.newBuilder()
       private Builder() {
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
-          final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
+                .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        this.teamUUID_ = "";
+        teamUUID_ = "";
 
-        this.typeStr_ = "";
+        typeStr_ = "";
 
-        this.typeUUID_ = "";
+        typeUUID_ = "";
 
-        this.fieldKey_ = "";
+        fieldKey_ = "";
 
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesRequestMessage_descriptor;
       }
 
@@ -3224,7 +2882,7 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage build() {
-        final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage result = this.buildPartial();
+        com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3233,12 +2891,12 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage buildPartial() {
-        final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage result = new com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage(this);
-        result.teamUUID_ = this.teamUUID_;
-        result.typeStr_ = this.typeStr_;
-        result.typeUUID_ = this.typeUUID_;
-        result.fieldKey_ = this.fieldKey_;
-        this.onBuilt();
+        com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage result = new com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage(this);
+        result.teamUUID_ = teamUUID_;
+        result.typeStr_ = typeStr_;
+        result.typeUUID_ = typeUUID_;
+        result.fieldKey_ = fieldKey_;
+        onBuilt();
         return result;
       }
 
@@ -3246,72 +2904,64 @@ public final class Cmdb {
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
       public Builder clearField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
       public Builder clearOneof(
-          final com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final int index, final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
-      public Builder mergeFrom(final com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage) {
-          return this.mergeFrom((com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage) other);
+          return mergeFrom((com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage other) {
-        if (other == com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance()) {
-          return this;
-        }
+      public Builder mergeFrom(com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage other) {
+        if (other == com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance()) return this;
         if (!other.getTeamUUID().isEmpty()) {
-          this.teamUUID_ = other.teamUUID_;
-          this.onChanged();
+          teamUUID_ = other.teamUUID_;
+          onChanged();
         }
         if (!other.getTypeStr().isEmpty()) {
-          this.typeStr_ = other.typeStr_;
-          this.onChanged();
+          typeStr_ = other.typeStr_;
+          onChanged();
         }
         if (!other.getTypeUUID().isEmpty()) {
-          this.typeUUID_ = other.typeUUID_;
-          this.onChanged();
+          typeUUID_ = other.typeUUID_;
+          onChanged();
         }
         if (!other.getFieldKey().isEmpty()) {
-          this.fieldKey_ = other.fieldKey_;
-          this.onChanged();
+          fieldKey_ = other.fieldKey_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
-        this.onChanged();
+        onChanged();
         return this;
       }
 
@@ -3322,375 +2972,326 @@ public final class Cmdb {
 
       @java.lang.Override
       public Builder mergeFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
-            this.mergeFrom(parsedMessage);
+            mergeFrom(parsedMessage);
           }
         }
         return this;
       }
 
       private java.lang.Object teamUUID_ = "";
-
       /**
        * <code>string TeamUUID = 1;</code>
-       *
        * @return The teamUUID.
        */
-      @Override
       public java.lang.String getTeamUUID() {
-        final java.lang.Object ref = this.teamUUID_;
+        java.lang.Object ref = teamUUID_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.teamUUID_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          teamUUID_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string TeamUUID = 1;</code>
-       *
        * @return The bytes for teamUUID.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getTeamUUIDBytes() {
-        final java.lang.Object ref = this.teamUUID_;
+          getTeamUUIDBytes() {
+        java.lang.Object ref = teamUUID_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.teamUUID_ = b;
+          teamUUID_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string TeamUUID = 1;</code>
-       *
        * @param value The teamUUID to set.
        * @return This builder for chaining.
        */
       public Builder setTeamUUID(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.teamUUID_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        teamUUID_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string TeamUUID = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearTeamUUID() {
-
-        this.teamUUID_ = getDefaultInstance().getTeamUUID();
-        this.onChanged();
+        
+        teamUUID_ = getDefaultInstance().getTeamUUID();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string TeamUUID = 1;</code>
-       *
        * @param value The bytes for teamUUID to set.
        * @return This builder for chaining.
        */
       public Builder setTeamUUIDBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.teamUUID_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        teamUUID_ = value;
+        onChanged();
         return this;
       }
 
       private java.lang.Object typeStr_ = "";
-
       /**
        * <code>string TypeStr = 2;</code>
-       *
        * @return The typeStr.
        */
-      @Override
       public java.lang.String getTypeStr() {
-        final java.lang.Object ref = this.typeStr_;
+        java.lang.Object ref = typeStr_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.typeStr_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          typeStr_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string TypeStr = 2;</code>
-       *
        * @return The bytes for typeStr.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getTypeStrBytes() {
-        final java.lang.Object ref = this.typeStr_;
+          getTypeStrBytes() {
+        java.lang.Object ref = typeStr_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.typeStr_ = b;
+          typeStr_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string TypeStr = 2;</code>
-       *
        * @param value The typeStr to set.
        * @return This builder for chaining.
        */
       public Builder setTypeStr(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.typeStr_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        typeStr_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string TypeStr = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearTypeStr() {
-
-        this.typeStr_ = getDefaultInstance().getTypeStr();
-        this.onChanged();
+        
+        typeStr_ = getDefaultInstance().getTypeStr();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string TypeStr = 2;</code>
-       *
        * @param value The bytes for typeStr to set.
        * @return This builder for chaining.
        */
       public Builder setTypeStrBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.typeStr_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        typeStr_ = value;
+        onChanged();
         return this;
       }
 
       private java.lang.Object typeUUID_ = "";
-
       /**
        * <code>string TypeUUID = 3;</code>
-       *
        * @return The typeUUID.
        */
-      @Override
       public java.lang.String getTypeUUID() {
-        final java.lang.Object ref = this.typeUUID_;
+        java.lang.Object ref = typeUUID_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.typeUUID_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          typeUUID_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string TypeUUID = 3;</code>
-       *
        * @return The bytes for typeUUID.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getTypeUUIDBytes() {
-        final java.lang.Object ref = this.typeUUID_;
+          getTypeUUIDBytes() {
+        java.lang.Object ref = typeUUID_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.typeUUID_ = b;
+          typeUUID_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string TypeUUID = 3;</code>
-       *
        * @param value The typeUUID to set.
        * @return This builder for chaining.
        */
       public Builder setTypeUUID(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.typeUUID_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        typeUUID_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string TypeUUID = 3;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearTypeUUID() {
-
-        this.typeUUID_ = getDefaultInstance().getTypeUUID();
-        this.onChanged();
+        
+        typeUUID_ = getDefaultInstance().getTypeUUID();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string TypeUUID = 3;</code>
-       *
        * @param value The bytes for typeUUID to set.
        * @return This builder for chaining.
        */
       public Builder setTypeUUIDBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.typeUUID_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        typeUUID_ = value;
+        onChanged();
         return this;
       }
 
       private java.lang.Object fieldKey_ = "";
-
       /**
        * <code>string FieldKey = 4;</code>
-       *
        * @return The fieldKey.
        */
-      @Override
       public java.lang.String getFieldKey() {
-        final java.lang.Object ref = this.fieldKey_;
+        java.lang.Object ref = fieldKey_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.fieldKey_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          fieldKey_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string FieldKey = 4;</code>
-       *
        * @return The bytes for fieldKey.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getFieldKeyBytes() {
-        final java.lang.Object ref = this.fieldKey_;
+          getFieldKeyBytes() {
+        java.lang.Object ref = fieldKey_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.fieldKey_ = b;
+          fieldKey_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string FieldKey = 4;</code>
-       *
        * @param value The fieldKey to set.
        * @return This builder for chaining.
        */
       public Builder setFieldKey(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.fieldKey_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        fieldKey_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string FieldKey = 4;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearFieldKey() {
-
-        this.fieldKey_ = getDefaultInstance().getFieldKey();
-        this.onChanged();
+        
+        fieldKey_ = getDefaultInstance().getFieldKey();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string FieldKey = 4;</code>
-       *
        * @param value The bytes for fieldKey to set.
        * @return This builder for chaining.
        */
       public Builder setFieldKeyBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.fieldKey_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fieldKey_ = value;
+        onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3703,12 +3304,12 @@ public final class Cmdb {
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:protocol.PropertiesRequestMessage)
     }
 
     // @@protoc_insertion_point(class_scope:protocol.PropertiesRequestMessage)
     private static final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage();
     }
@@ -3721,8 +3322,8 @@ public final class Cmdb {
         PARSER = new com.google.protobuf.AbstractParser<PropertiesRequestMessage>() {
       @java.lang.Override
       public PropertiesRequestMessage parsePartialFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new PropertiesRequestMessage(input, extensionRegistry);
       }
@@ -3750,18 +3351,14 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return Whether the error field is set.
      */
     boolean hasError();
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return The error.
      */
     com.ones.openplatform.protocol.Common.ErrorMessage getError();
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
      */
@@ -3769,20 +3366,16 @@ public final class Cmdb {
 
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The result.
      */
     java.lang.String getResult();
-
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The bytes for result.
      */
     com.google.protobuf.ByteString
-    getResultBytes();
+        getResultBytes();
   }
-
   /**
    * Protobuf type {@code protocol.PropertiesResponseMessage}
    */
@@ -3790,21 +3383,19 @@ public final class Cmdb {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:protocol.PropertiesResponseMessage)
       PropertiesResponseMessageOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     // Use PropertiesResponseMessage.newBuilder() to construct.
-    private PropertiesResponseMessage(final com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PropertiesResponseMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private PropertiesResponseMessage() {
-      this.result_ = "";
+      result_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        final UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new PropertiesResponseMessage();
     }
 
@@ -3813,46 +3404,45 @@ public final class Cmdb {
     getUnknownFields() {
       return this.unknownFields;
     }
-
     private PropertiesResponseMessage(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      final com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
-          final int tag = input.readTag();
+          int tag = input.readTag();
           switch (tag) {
             case 0:
               done = true;
               break;
             case 10: {
               com.ones.openplatform.protocol.Common.ErrorMessage.Builder subBuilder = null;
-              if (this.error_ != null) {
-                subBuilder = this.error_.toBuilder();
+              if (error_ != null) {
+                subBuilder = error_.toBuilder();
               }
-              this.error_ = input.readMessage(com.ones.openplatform.protocol.Common.ErrorMessage.parser(), extensionRegistry);
+              error_ = input.readMessage(com.ones.openplatform.protocol.Common.ErrorMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.error_);
-                this.error_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(error_);
+                error_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 18: {
-              final java.lang.String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              this.result_ = s;
+              result_ = s;
               break;
             }
             default: {
-              if (!this.parseUnknownField(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3860,25 +3450,24 @@ public final class Cmdb {
             }
           }
         }
-      } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (final java.io.IOException e) {
+      } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
-        this.makeExtensionsImmutable();
+        makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesResponseMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesResponseMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.class, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder.class);
@@ -3886,71 +3475,62 @@ public final class Cmdb {
 
     public static final int ERROR_FIELD_NUMBER = 1;
     private com.ones.openplatform.protocol.Common.ErrorMessage error_;
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return Whether the error field is set.
      */
     @java.lang.Override
     public boolean hasError() {
-      return this.error_ != null;
+      return error_ != null;
     }
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
-     *
      * @return The error.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.ErrorMessage getError() {
-      return this.error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : this.error_;
+      return error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : error_;
     }
-
     /**
      * <code>.protocol.ErrorMessage Error = 1;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder getErrorOrBuilder() {
-      return this.getError();
+      return getError();
     }
 
     public static final int RESULT_FIELD_NUMBER = 2;
     private volatile java.lang.Object result_;
-
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The result.
      */
     @java.lang.Override
     public java.lang.String getResult() {
-      final java.lang.Object ref = this.result_;
+      java.lang.Object ref = result_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        final com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        final java.lang.String s = bs.toStringUtf8();
-        this.result_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        result_ = s;
         return s;
       }
     }
-
     /**
      * <code>string Result = 2;</code>
-     *
      * @return The bytes for result.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getResultBytes() {
-      final java.lang.Object ref = this.result_;
+        getResultBytes() {
+      java.lang.Object ref = result_;
       if (ref instanceof java.lang.String) {
-        final com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        this.result_ = b;
+        result_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3958,194 +3538,163 @@ public final class Cmdb {
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
-      final byte isInitialized = this.memoizedIsInitialized;
-      if (isInitialized == 1) {
-        return true;
-      }
-      if (isInitialized == 0) {
-        return false;
-      }
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      this.memoizedIsInitialized = 1;
+      memoizedIsInitialized = 1;
       return true;
     }
 
     @java.lang.Override
-    public void writeTo(final com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
-      if (this.error_ != null) {
-        output.writeMessage(1, this.getError());
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (error_ != null) {
+        output.writeMessage(1, getError());
       }
-      if (!this.getResultBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, this.result_);
+      if (!getResultBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, result_);
       }
-      this.unknownFields.writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
     public int getSerializedSize() {
-      int size = this.memoizedSize;
-      if (size != -1) {
-        return size;
-      }
+      int size = memoizedSize;
+      if (size != -1) return size;
 
       size = 0;
-      if (this.error_ != null) {
+      if (error_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, this.getError());
+          .computeMessageSize(1, getError());
       }
-      if (!this.getResultBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, this.result_);
+      if (!getResultBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, result_);
       }
-      size += this.unknownFields.getSerializedSize();
-      this.memoizedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage)) {
         return super.equals(obj);
       }
-      final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage other = (com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage) obj;
+      com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage other = (com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage) obj;
 
-      if (this.hasError() != other.hasError()) {
-        return false;
+      if (hasError() != other.hasError()) return false;
+      if (hasError()) {
+        if (!getError()
+            .equals(other.getError())) return false;
       }
-      if (this.hasError()) {
-        if (!this.getError()
-            .equals(other.getError())) {
-          return false;
-        }
-      }
-      if (!this.getResult()
-          .equals(other.getResult())) {
-        return false;
-      }
-      if (!this.unknownFields.equals(other.unknownFields)) {
-        return false;
-      }
+      if (!getResult()
+          .equals(other.getResult())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
     @java.lang.Override
     public int hashCode() {
-      if (this.memoizedHashCode != 0) {
-        return this.memoizedHashCode;
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (this.hasError()) {
+      if (hasError()) {
         hash = (37 * hash) + ERROR_FIELD_NUMBER;
-        hash = (53 * hash) + this.getError().hashCode();
+        hash = (53 * hash) + getError().hashCode();
       }
       hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + this.getResult().hashCode();
-      hash = (29 * hash) + this.unknownFields.hashCode();
-      this.memoizedHashCode = hash;
+      hash = (53 * hash) + getResult().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
       return hash;
     }
 
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final java.nio.ByteBuffer data)
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final java.nio.ByteBuffer data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final com.google.protobuf.ByteString data)
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final com.google.protobuf.ByteString data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(final byte[] data)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final byte[] data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseDelimitedFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseDelimitedFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage prototype) {
+    public static Builder newBuilder(com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -4154,11 +3703,10 @@ public final class Cmdb {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      final Builder builder = new Builder(parent);
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code protocol.PropertiesResponseMessage}
      */
@@ -4167,13 +3715,13 @@ public final class Cmdb {
         // @@protoc_insertion_point(builder_implements:protocol.PropertiesResponseMessage)
         com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesResponseMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesResponseMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.class, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder.class);
@@ -4181,38 +3729,36 @@ public final class Cmdb {
 
       // Construct using com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.newBuilder()
       private Builder() {
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
-          final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
+                .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (this.errorBuilder_ == null) {
-          this.error_ = null;
+        if (errorBuilder_ == null) {
+          error_ = null;
         } else {
-          this.error_ = null;
-          this.errorBuilder_ = null;
+          error_ = null;
+          errorBuilder_ = null;
         }
-        this.result_ = "";
+        result_ = "";
 
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesResponseMessage_descriptor;
       }
 
@@ -4223,7 +3769,7 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage build() {
-        final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage result = this.buildPartial();
+        com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4232,14 +3778,14 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage buildPartial() {
-        final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage result = new com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage(this);
-        if (this.errorBuilder_ == null) {
-          result.error_ = this.error_;
+        com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage result = new com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage(this);
+        if (errorBuilder_ == null) {
+          result.error_ = error_;
         } else {
-          result.error_ = this.errorBuilder_.build();
+          result.error_ = errorBuilder_.build();
         }
-        result.result_ = this.result_;
-        this.onBuilt();
+        result.result_ = result_;
+        onBuilt();
         return result;
       }
 
@@ -4247,63 +3793,55 @@ public final class Cmdb {
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
       public Builder clearField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
       public Builder clearOneof(
-          final com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final int index, final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
-      public Builder mergeFrom(final com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage) {
-          return this.mergeFrom((com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage) other);
+          return mergeFrom((com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage other) {
-        if (other == com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance()) {
-          return this;
-        }
+      public Builder mergeFrom(com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage other) {
+        if (other == com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance()) return this;
         if (other.hasError()) {
-          this.mergeError(other.getError());
+          mergeError(other.getError());
         }
         if (!other.getResult().isEmpty()) {
-          this.result_ = other.result_;
-          this.onChanged();
+          result_ = other.result_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
-        this.onChanged();
+        onChanged();
         return this;
       }
 
@@ -4314,18 +3852,18 @@ public final class Cmdb {
 
       @java.lang.Override
       public Builder mergeFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
-            this.mergeFrom(parsedMessage);
+            mergeFrom(parsedMessage);
           }
         }
         return this;
@@ -4334,224 +3872,197 @@ public final class Cmdb {
       private com.ones.openplatform.protocol.Common.ErrorMessage error_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder> errorBuilder_;
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
-       *
        * @return Whether the error field is set.
        */
-      @Override
       public boolean hasError() {
-        return this.errorBuilder_ != null || this.error_ != null;
+        return errorBuilder_ != null || error_ != null;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
-       *
        * @return The error.
        */
-      @Override
       public com.ones.openplatform.protocol.Common.ErrorMessage getError() {
-        if (this.errorBuilder_ == null) {
-          return this.error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : this.error_;
+        if (errorBuilder_ == null) {
+          return error_ == null ? com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : error_;
         } else {
-          return this.errorBuilder_.getMessage();
+          return errorBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
-      public Builder setError(final com.ones.openplatform.protocol.Common.ErrorMessage value) {
-        if (this.errorBuilder_ == null) {
+      public Builder setError(com.ones.openplatform.protocol.Common.ErrorMessage value) {
+        if (errorBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.error_ = value;
-          this.onChanged();
+          error_ = value;
+          onChanged();
         } else {
-          this.errorBuilder_.setMessage(value);
+          errorBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       public Builder setError(
-          final com.ones.openplatform.protocol.Common.ErrorMessage.Builder builderForValue) {
-        if (this.errorBuilder_ == null) {
-          this.error_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Common.ErrorMessage.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          error_ = builderForValue.build();
+          onChanged();
         } else {
-          this.errorBuilder_.setMessage(builderForValue.build());
+          errorBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
-      public Builder mergeError(final com.ones.openplatform.protocol.Common.ErrorMessage value) {
-        if (this.errorBuilder_ == null) {
-          if (this.error_ != null) {
-            this.error_ =
-                com.ones.openplatform.protocol.Common.ErrorMessage.newBuilder(this.error_).mergeFrom(value).buildPartial();
+      public Builder mergeError(com.ones.openplatform.protocol.Common.ErrorMessage value) {
+        if (errorBuilder_ == null) {
+          if (error_ != null) {
+            error_ =
+              com.ones.openplatform.protocol.Common.ErrorMessage.newBuilder(error_).mergeFrom(value).buildPartial();
           } else {
-            this.error_ = value;
+            error_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.errorBuilder_.mergeFrom(value);
+          errorBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       public Builder clearError() {
-        if (this.errorBuilder_ == null) {
-          this.error_ = null;
-          this.onChanged();
+        if (errorBuilder_ == null) {
+          error_ = null;
+          onChanged();
         } else {
-          this.error_ = null;
-          this.errorBuilder_ = null;
+          error_ = null;
+          errorBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       public com.ones.openplatform.protocol.Common.ErrorMessage.Builder getErrorBuilder() {
-
-        this.onChanged();
-        return this.getErrorFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getErrorFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder getErrorOrBuilder() {
-        if (this.errorBuilder_ != null) {
-          return this.errorBuilder_.getMessageOrBuilder();
+        if (errorBuilder_ != null) {
+          return errorBuilder_.getMessageOrBuilder();
         } else {
-          return this.error_ == null ?
-              com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : this.error_;
+          return error_ == null ?
+              com.ones.openplatform.protocol.Common.ErrorMessage.getDefaultInstance() : error_;
         }
       }
-
       /**
        * <code>.protocol.ErrorMessage Error = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder>
-      getErrorFieldBuilder() {
-        if (this.errorBuilder_ == null) {
-          this.errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder> 
+          getErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Common.ErrorMessage, com.ones.openplatform.protocol.Common.ErrorMessage.Builder, com.ones.openplatform.protocol.Common.ErrorMessageOrBuilder>(
-              this.getError(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.error_ = null;
+                  getError(),
+                  getParentForChildren(),
+                  isClean());
+          error_ = null;
         }
-        return this.errorBuilder_;
+        return errorBuilder_;
       }
 
       private java.lang.Object result_ = "";
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @return The result.
        */
-      @Override
       public java.lang.String getResult() {
-        final java.lang.Object ref = this.result_;
+        java.lang.Object ref = result_;
         if (!(ref instanceof java.lang.String)) {
-          final com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          final java.lang.String s = bs.toStringUtf8();
-          this.result_ = s;
+          java.lang.String s = bs.toStringUtf8();
+          result_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @return The bytes for result.
        */
-      @Override
       public com.google.protobuf.ByteString
-      getResultBytes() {
-        final java.lang.Object ref = this.result_;
+          getResultBytes() {
+        java.lang.Object ref = result_;
         if (ref instanceof String) {
-          final com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          this.result_ = b;
+          result_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @param value The result to set.
        * @return This builder for chaining.
        */
       public Builder setResult(
-          final java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
-        this.result_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  
+        result_ = value;
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearResult() {
-
-        this.result_ = getDefaultInstance().getResult();
-        this.onChanged();
+        
+        result_ = getDefaultInstance().getResult();
+        onChanged();
         return this;
       }
-
       /**
        * <code>string Result = 2;</code>
-       *
        * @param value The bytes for result to set.
        * @return This builder for chaining.
        */
       public Builder setResultBytes(
-          final com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        this.result_ = value;
-        this.onChanged();
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        result_ = value;
+        onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4564,12 +4075,12 @@ public final class Cmdb {
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:protocol.PropertiesResponseMessage)
     }
 
     // @@protoc_insertion_point(class_scope:protocol.PropertiesResponseMessage)
     private static final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage();
     }
@@ -4582,8 +4093,8 @@ public final class Cmdb {
         PARSER = new com.google.protobuf.AbstractParser<PropertiesResponseMessage>() {
       @java.lang.Override
       public PropertiesResponseMessage parsePartialFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new PropertiesResponseMessage(input, extensionRegistry);
       }
@@ -4611,18 +4122,14 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
-     *
      * @return Whether the propertiesRequest field is set.
      */
     boolean hasPropertiesRequest();
-
     /**
      * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
-     *
      * @return The propertiesRequest.
      */
     com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage getPropertiesRequest();
-
     /**
      * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
      */
@@ -4630,24 +4137,19 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
-     *
      * @return Whether the propertiesResponse field is set.
      */
     boolean hasPropertiesResponse();
-
     /**
      * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
-     *
      * @return The propertiesResponse.
      */
     com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage getPropertiesResponse();
-
     /**
      * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
      */
     com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder getPropertiesResponseOrBuilder();
   }
-
   /**
    * Protobuf type {@code protocol.PropertiesMessage}
    */
@@ -4655,20 +4157,18 @@ public final class Cmdb {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:protocol.PropertiesMessage)
       PropertiesMessageOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     // Use PropertiesMessage.newBuilder() to construct.
-    private PropertiesMessage(final com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PropertiesMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private PropertiesMessage() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        final UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new PropertiesMessage();
     }
 
@@ -4677,53 +4177,52 @@ public final class Cmdb {
     getUnknownFields() {
       return this.unknownFields;
     }
-
     private PropertiesMessage(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      final com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
-          final int tag = input.readTag();
+          int tag = input.readTag();
           switch (tag) {
             case 0:
               done = true;
               break;
             case 10: {
               com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder subBuilder = null;
-              if (this.propertiesRequest_ != null) {
-                subBuilder = this.propertiesRequest_.toBuilder();
+              if (propertiesRequest_ != null) {
+                subBuilder = propertiesRequest_.toBuilder();
               }
-              this.propertiesRequest_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.parser(), extensionRegistry);
+              propertiesRequest_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.propertiesRequest_);
-                this.propertiesRequest_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(propertiesRequest_);
+                propertiesRequest_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 18: {
               com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder subBuilder = null;
-              if (this.propertiesResponse_ != null) {
-                subBuilder = this.propertiesResponse_.toBuilder();
+              if (propertiesResponse_ != null) {
+                subBuilder = propertiesResponse_.toBuilder();
               }
-              this.propertiesResponse_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.parser(), extensionRegistry);
+              propertiesResponse_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.propertiesResponse_);
-                this.propertiesResponse_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(propertiesResponse_);
+                propertiesResponse_ = subBuilder.buildPartial();
               }
 
               break;
             }
             default: {
-              if (!this.parseUnknownField(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4731,25 +4230,24 @@ public final class Cmdb {
             }
           }
         }
-      } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (final java.io.IOException e) {
+      } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
-        this.makeExtensionsImmutable();
+        makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ones.openplatform.protocol.Cmdb.PropertiesMessage.class, com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder.class);
@@ -4757,263 +4255,220 @@ public final class Cmdb {
 
     public static final int PROPERTIESREQUEST_FIELD_NUMBER = 1;
     private com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage propertiesRequest_;
-
     /**
      * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
-     *
      * @return Whether the propertiesRequest field is set.
      */
     @java.lang.Override
     public boolean hasPropertiesRequest() {
-      return this.propertiesRequest_ != null;
+      return propertiesRequest_ != null;
     }
-
     /**
      * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
-     *
      * @return The propertiesRequest.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage getPropertiesRequest() {
-      return this.propertiesRequest_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance() : this.propertiesRequest_;
+      return propertiesRequest_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance() : propertiesRequest_;
     }
-
     /**
      * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessageOrBuilder getPropertiesRequestOrBuilder() {
-      return this.getPropertiesRequest();
+      return getPropertiesRequest();
     }
 
     public static final int PROPERTIESRESPONSE_FIELD_NUMBER = 2;
     private com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage propertiesResponse_;
-
     /**
      * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
-     *
      * @return Whether the propertiesResponse field is set.
      */
     @java.lang.Override
     public boolean hasPropertiesResponse() {
-      return this.propertiesResponse_ != null;
+      return propertiesResponse_ != null;
     }
-
     /**
      * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
-     *
      * @return The propertiesResponse.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage getPropertiesResponse() {
-      return this.propertiesResponse_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance() : this.propertiesResponse_;
+      return propertiesResponse_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance() : propertiesResponse_;
     }
-
     /**
      * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder getPropertiesResponseOrBuilder() {
-      return this.getPropertiesResponse();
+      return getPropertiesResponse();
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
-      final byte isInitialized = this.memoizedIsInitialized;
-      if (isInitialized == 1) {
-        return true;
-      }
-      if (isInitialized == 0) {
-        return false;
-      }
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      this.memoizedIsInitialized = 1;
+      memoizedIsInitialized = 1;
       return true;
     }
 
     @java.lang.Override
-    public void writeTo(final com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
-      if (this.propertiesRequest_ != null) {
-        output.writeMessage(1, this.getPropertiesRequest());
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (propertiesRequest_ != null) {
+        output.writeMessage(1, getPropertiesRequest());
       }
-      if (this.propertiesResponse_ != null) {
-        output.writeMessage(2, this.getPropertiesResponse());
+      if (propertiesResponse_ != null) {
+        output.writeMessage(2, getPropertiesResponse());
       }
-      this.unknownFields.writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
     public int getSerializedSize() {
-      int size = this.memoizedSize;
-      if (size != -1) {
-        return size;
-      }
+      int size = memoizedSize;
+      if (size != -1) return size;
 
       size = 0;
-      if (this.propertiesRequest_ != null) {
+      if (propertiesRequest_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, this.getPropertiesRequest());
+          .computeMessageSize(1, getPropertiesRequest());
       }
-      if (this.propertiesResponse_ != null) {
+      if (propertiesResponse_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, this.getPropertiesResponse());
+          .computeMessageSize(2, getPropertiesResponse());
       }
-      size += this.unknownFields.getSerializedSize();
-      this.memoizedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.ones.openplatform.protocol.Cmdb.PropertiesMessage)) {
         return super.equals(obj);
       }
-      final com.ones.openplatform.protocol.Cmdb.PropertiesMessage other = (com.ones.openplatform.protocol.Cmdb.PropertiesMessage) obj;
+      com.ones.openplatform.protocol.Cmdb.PropertiesMessage other = (com.ones.openplatform.protocol.Cmdb.PropertiesMessage) obj;
 
-      if (this.hasPropertiesRequest() != other.hasPropertiesRequest()) {
-        return false;
+      if (hasPropertiesRequest() != other.hasPropertiesRequest()) return false;
+      if (hasPropertiesRequest()) {
+        if (!getPropertiesRequest()
+            .equals(other.getPropertiesRequest())) return false;
       }
-      if (this.hasPropertiesRequest()) {
-        if (!this.getPropertiesRequest()
-            .equals(other.getPropertiesRequest())) {
-          return false;
-        }
+      if (hasPropertiesResponse() != other.hasPropertiesResponse()) return false;
+      if (hasPropertiesResponse()) {
+        if (!getPropertiesResponse()
+            .equals(other.getPropertiesResponse())) return false;
       }
-      if (this.hasPropertiesResponse() != other.hasPropertiesResponse()) {
-        return false;
-      }
-      if (this.hasPropertiesResponse()) {
-        if (!this.getPropertiesResponse()
-            .equals(other.getPropertiesResponse())) {
-          return false;
-        }
-      }
-      if (!this.unknownFields.equals(other.unknownFields)) {
-        return false;
-      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
     @java.lang.Override
     public int hashCode() {
-      if (this.memoizedHashCode != 0) {
-        return this.memoizedHashCode;
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (this.hasPropertiesRequest()) {
+      if (hasPropertiesRequest()) {
         hash = (37 * hash) + PROPERTIESREQUEST_FIELD_NUMBER;
-        hash = (53 * hash) + this.getPropertiesRequest().hashCode();
+        hash = (53 * hash) + getPropertiesRequest().hashCode();
       }
-      if (this.hasPropertiesResponse()) {
+      if (hasPropertiesResponse()) {
         hash = (37 * hash) + PROPERTIESRESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + this.getPropertiesResponse().hashCode();
+        hash = (53 * hash) + getPropertiesResponse().hashCode();
       }
-      hash = (29 * hash) + this.unknownFields.hashCode();
-      this.memoizedHashCode = hash;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
       return hash;
     }
 
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final java.nio.ByteBuffer data)
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final java.nio.ByteBuffer data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final com.google.protobuf.ByteString data)
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final com.google.protobuf.ByteString data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(final byte[] data)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final byte[] data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseDelimitedFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseDelimitedFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.PropertiesMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(final com.ones.openplatform.protocol.Cmdb.PropertiesMessage prototype) {
+    public static Builder newBuilder(com.ones.openplatform.protocol.Cmdb.PropertiesMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -5022,11 +4477,10 @@ public final class Cmdb {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      final Builder builder = new Builder(parent);
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code protocol.PropertiesMessage}
      */
@@ -5035,13 +4489,13 @@ public final class Cmdb {
         // @@protoc_insertion_point(builder_implements:protocol.PropertiesMessage)
         com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.ones.openplatform.protocol.Cmdb.PropertiesMessage.class, com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder.class);
@@ -5049,42 +4503,40 @@ public final class Cmdb {
 
       // Construct using com.ones.openplatform.protocol.Cmdb.PropertiesMessage.newBuilder()
       private Builder() {
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
-          final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
+                .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (this.propertiesRequestBuilder_ == null) {
-          this.propertiesRequest_ = null;
+        if (propertiesRequestBuilder_ == null) {
+          propertiesRequest_ = null;
         } else {
-          this.propertiesRequest_ = null;
-          this.propertiesRequestBuilder_ = null;
+          propertiesRequest_ = null;
+          propertiesRequestBuilder_ = null;
         }
-        if (this.propertiesResponseBuilder_ == null) {
-          this.propertiesResponse_ = null;
+        if (propertiesResponseBuilder_ == null) {
+          propertiesResponse_ = null;
         } else {
-          this.propertiesResponse_ = null;
-          this.propertiesResponseBuilder_ = null;
+          propertiesResponse_ = null;
+          propertiesResponseBuilder_ = null;
         }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_PropertiesMessage_descriptor;
       }
 
@@ -5095,7 +4547,7 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesMessage build() {
-        final com.ones.openplatform.protocol.Cmdb.PropertiesMessage result = this.buildPartial();
+        com.ones.openplatform.protocol.Cmdb.PropertiesMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5104,18 +4556,18 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesMessage buildPartial() {
-        final com.ones.openplatform.protocol.Cmdb.PropertiesMessage result = new com.ones.openplatform.protocol.Cmdb.PropertiesMessage(this);
-        if (this.propertiesRequestBuilder_ == null) {
-          result.propertiesRequest_ = this.propertiesRequest_;
+        com.ones.openplatform.protocol.Cmdb.PropertiesMessage result = new com.ones.openplatform.protocol.Cmdb.PropertiesMessage(this);
+        if (propertiesRequestBuilder_ == null) {
+          result.propertiesRequest_ = propertiesRequest_;
         } else {
-          result.propertiesRequest_ = this.propertiesRequestBuilder_.build();
+          result.propertiesRequest_ = propertiesRequestBuilder_.build();
         }
-        if (this.propertiesResponseBuilder_ == null) {
-          result.propertiesResponse_ = this.propertiesResponse_;
+        if (propertiesResponseBuilder_ == null) {
+          result.propertiesResponse_ = propertiesResponse_;
         } else {
-          result.propertiesResponse_ = this.propertiesResponseBuilder_.build();
+          result.propertiesResponse_ = propertiesResponseBuilder_.build();
         }
-        this.onBuilt();
+        onBuilt();
         return result;
       }
 
@@ -5123,62 +4575,54 @@ public final class Cmdb {
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
       public Builder clearField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
       public Builder clearOneof(
-          final com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final int index, final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
-      public Builder mergeFrom(final com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.ones.openplatform.protocol.Cmdb.PropertiesMessage) {
-          return this.mergeFrom((com.ones.openplatform.protocol.Cmdb.PropertiesMessage) other);
+          return mergeFrom((com.ones.openplatform.protocol.Cmdb.PropertiesMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(final com.ones.openplatform.protocol.Cmdb.PropertiesMessage other) {
-        if (other == com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance()) {
-          return this;
-        }
+      public Builder mergeFrom(com.ones.openplatform.protocol.Cmdb.PropertiesMessage other) {
+        if (other == com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance()) return this;
         if (other.hasPropertiesRequest()) {
-          this.mergePropertiesRequest(other.getPropertiesRequest());
+          mergePropertiesRequest(other.getPropertiesRequest());
         }
         if (other.hasPropertiesResponse()) {
-          this.mergePropertiesResponse(other.getPropertiesResponse());
+          mergePropertiesResponse(other.getPropertiesResponse());
         }
         this.mergeUnknownFields(other.unknownFields);
-        this.onChanged();
+        onChanged();
         return this;
       }
 
@@ -5189,18 +4633,18 @@ public final class Cmdb {
 
       @java.lang.Override
       public Builder mergeFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.ones.openplatform.protocol.Cmdb.PropertiesMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.ones.openplatform.protocol.Cmdb.PropertiesMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
-            this.mergeFrom(parsedMessage);
+            mergeFrom(parsedMessage);
           }
         }
         return this;
@@ -5209,269 +4653,240 @@ public final class Cmdb {
       private com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage propertiesRequest_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessageOrBuilder> propertiesRequestBuilder_;
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
-       *
        * @return Whether the propertiesRequest field is set.
        */
-      @Override
       public boolean hasPropertiesRequest() {
-        return this.propertiesRequestBuilder_ != null || this.propertiesRequest_ != null;
+        return propertiesRequestBuilder_ != null || propertiesRequest_ != null;
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
-       *
        * @return The propertiesRequest.
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage getPropertiesRequest() {
-        if (this.propertiesRequestBuilder_ == null) {
-          return this.propertiesRequest_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance() : this.propertiesRequest_;
+        if (propertiesRequestBuilder_ == null) {
+          return propertiesRequest_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance() : propertiesRequest_;
         } else {
-          return this.propertiesRequestBuilder_.getMessage();
+          return propertiesRequestBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
        */
-      public Builder setPropertiesRequest(final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage value) {
-        if (this.propertiesRequestBuilder_ == null) {
+      public Builder setPropertiesRequest(com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage value) {
+        if (propertiesRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.propertiesRequest_ = value;
-          this.onChanged();
+          propertiesRequest_ = value;
+          onChanged();
         } else {
-          this.propertiesRequestBuilder_.setMessage(value);
+          propertiesRequestBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
        */
       public Builder setPropertiesRequest(
-          final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder builderForValue) {
-        if (this.propertiesRequestBuilder_ == null) {
-          this.propertiesRequest_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder builderForValue) {
+        if (propertiesRequestBuilder_ == null) {
+          propertiesRequest_ = builderForValue.build();
+          onChanged();
         } else {
-          this.propertiesRequestBuilder_.setMessage(builderForValue.build());
+          propertiesRequestBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
        */
-      public Builder mergePropertiesRequest(final com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage value) {
-        if (this.propertiesRequestBuilder_ == null) {
-          if (this.propertiesRequest_ != null) {
-            this.propertiesRequest_ =
-                com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.newBuilder(this.propertiesRequest_).mergeFrom(value).buildPartial();
+      public Builder mergePropertiesRequest(com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage value) {
+        if (propertiesRequestBuilder_ == null) {
+          if (propertiesRequest_ != null) {
+            propertiesRequest_ =
+              com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.newBuilder(propertiesRequest_).mergeFrom(value).buildPartial();
           } else {
-            this.propertiesRequest_ = value;
+            propertiesRequest_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.propertiesRequestBuilder_.mergeFrom(value);
+          propertiesRequestBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
        */
       public Builder clearPropertiesRequest() {
-        if (this.propertiesRequestBuilder_ == null) {
-          this.propertiesRequest_ = null;
-          this.onChanged();
+        if (propertiesRequestBuilder_ == null) {
+          propertiesRequest_ = null;
+          onChanged();
         } else {
-          this.propertiesRequest_ = null;
-          this.propertiesRequestBuilder_ = null;
+          propertiesRequest_ = null;
+          propertiesRequestBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
        */
       public com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder getPropertiesRequestBuilder() {
-
-        this.onChanged();
-        return this.getPropertiesRequestFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getPropertiesRequestFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessageOrBuilder getPropertiesRequestOrBuilder() {
-        if (this.propertiesRequestBuilder_ != null) {
-          return this.propertiesRequestBuilder_.getMessageOrBuilder();
+        if (propertiesRequestBuilder_ != null) {
+          return propertiesRequestBuilder_.getMessageOrBuilder();
         } else {
-          return this.propertiesRequest_ == null ?
-              com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance() : this.propertiesRequest_;
+          return propertiesRequest_ == null ?
+              com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.getDefaultInstance() : propertiesRequest_;
         }
       }
-
       /**
        * <code>.protocol.PropertiesRequestMessage PropertiesRequest = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessageOrBuilder>
-      getPropertiesRequestFieldBuilder() {
-        if (this.propertiesRequestBuilder_ == null) {
-          this.propertiesRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessageOrBuilder> 
+          getPropertiesRequestFieldBuilder() {
+        if (propertiesRequestBuilder_ == null) {
+          propertiesRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesRequestMessageOrBuilder>(
-              this.getPropertiesRequest(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.propertiesRequest_ = null;
+                  getPropertiesRequest(),
+                  getParentForChildren(),
+                  isClean());
+          propertiesRequest_ = null;
         }
-        return this.propertiesRequestBuilder_;
+        return propertiesRequestBuilder_;
       }
 
       private com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage propertiesResponse_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder> propertiesResponseBuilder_;
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
-       *
        * @return Whether the propertiesResponse field is set.
        */
-      @Override
       public boolean hasPropertiesResponse() {
-        return this.propertiesResponseBuilder_ != null || this.propertiesResponse_ != null;
+        return propertiesResponseBuilder_ != null || propertiesResponse_ != null;
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
-       *
        * @return The propertiesResponse.
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage getPropertiesResponse() {
-        if (this.propertiesResponseBuilder_ == null) {
-          return this.propertiesResponse_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance() : this.propertiesResponse_;
+        if (propertiesResponseBuilder_ == null) {
+          return propertiesResponse_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance() : propertiesResponse_;
         } else {
-          return this.propertiesResponseBuilder_.getMessage();
+          return propertiesResponseBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
        */
-      public Builder setPropertiesResponse(final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage value) {
-        if (this.propertiesResponseBuilder_ == null) {
+      public Builder setPropertiesResponse(com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage value) {
+        if (propertiesResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.propertiesResponse_ = value;
-          this.onChanged();
+          propertiesResponse_ = value;
+          onChanged();
         } else {
-          this.propertiesResponseBuilder_.setMessage(value);
+          propertiesResponseBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
        */
       public Builder setPropertiesResponse(
-          final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder builderForValue) {
-        if (this.propertiesResponseBuilder_ == null) {
-          this.propertiesResponse_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder builderForValue) {
+        if (propertiesResponseBuilder_ == null) {
+          propertiesResponse_ = builderForValue.build();
+          onChanged();
         } else {
-          this.propertiesResponseBuilder_.setMessage(builderForValue.build());
+          propertiesResponseBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
        */
-      public Builder mergePropertiesResponse(final com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage value) {
-        if (this.propertiesResponseBuilder_ == null) {
-          if (this.propertiesResponse_ != null) {
-            this.propertiesResponse_ =
-                com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.newBuilder(this.propertiesResponse_).mergeFrom(value).buildPartial();
+      public Builder mergePropertiesResponse(com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage value) {
+        if (propertiesResponseBuilder_ == null) {
+          if (propertiesResponse_ != null) {
+            propertiesResponse_ =
+              com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.newBuilder(propertiesResponse_).mergeFrom(value).buildPartial();
           } else {
-            this.propertiesResponse_ = value;
+            propertiesResponse_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.propertiesResponseBuilder_.mergeFrom(value);
+          propertiesResponseBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
        */
       public Builder clearPropertiesResponse() {
-        if (this.propertiesResponseBuilder_ == null) {
-          this.propertiesResponse_ = null;
-          this.onChanged();
+        if (propertiesResponseBuilder_ == null) {
+          propertiesResponse_ = null;
+          onChanged();
         } else {
-          this.propertiesResponse_ = null;
-          this.propertiesResponseBuilder_ = null;
+          propertiesResponse_ = null;
+          propertiesResponseBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
        */
       public com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder getPropertiesResponseBuilder() {
-
-        this.onChanged();
-        return this.getPropertiesResponseFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getPropertiesResponseFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder getPropertiesResponseOrBuilder() {
-        if (this.propertiesResponseBuilder_ != null) {
-          return this.propertiesResponseBuilder_.getMessageOrBuilder();
+        if (propertiesResponseBuilder_ != null) {
+          return propertiesResponseBuilder_.getMessageOrBuilder();
         } else {
-          return this.propertiesResponse_ == null ?
-              com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance() : this.propertiesResponse_;
+          return propertiesResponse_ == null ?
+              com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.getDefaultInstance() : propertiesResponse_;
         }
       }
-
       /**
        * <code>.protocol.PropertiesResponseMessage PropertiesResponse = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder>
-      getPropertiesResponseFieldBuilder() {
-        if (this.propertiesResponseBuilder_ == null) {
-          this.propertiesResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder> 
+          getPropertiesResponseFieldBuilder() {
+        if (propertiesResponseBuilder_ == null) {
+          propertiesResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesResponseMessageOrBuilder>(
-              this.getPropertiesResponse(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.propertiesResponse_ = null;
+                  getPropertiesResponse(),
+                  getParentForChildren(),
+                  isClean());
+          propertiesResponse_ = null;
         }
-        return this.propertiesResponseBuilder_;
+        return propertiesResponseBuilder_;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5484,12 +4899,12 @@ public final class Cmdb {
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:protocol.PropertiesMessage)
     }
 
     // @@protoc_insertion_point(class_scope:protocol.PropertiesMessage)
     private static final com.ones.openplatform.protocol.Cmdb.PropertiesMessage DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.ones.openplatform.protocol.Cmdb.PropertiesMessage();
     }
@@ -5502,8 +4917,8 @@ public final class Cmdb {
         PARSER = new com.google.protobuf.AbstractParser<PropertiesMessage>() {
       @java.lang.Override
       public PropertiesMessage parsePartialFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new PropertiesMessage(input, extensionRegistry);
       }
@@ -5535,22 +4950,18 @@ public final class Cmdb {
      * </pre>
      *
      * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
-     *
      * @return Whether the sender field is set.
      */
     boolean hasSender();
-
     /**
      * <pre>
      * 添加消息头，路由数据
      * </pre>
      *
      * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
-     *
      * @return The sender.
      */
     com.ones.openplatform.protocol.Common.PluginInstanceDescriptor getSender();
-
     /**
      * <pre>
      * 添加消息头，路由数据
@@ -5562,18 +4973,14 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.HostDescriptor Host = 2;</code>
-     *
      * @return Whether the host field is set.
      */
     boolean hasHost();
-
     /**
      * <code>.protocol.HostDescriptor Host = 2;</code>
-     *
      * @return The host.
      */
     com.ones.openplatform.protocol.Common.HostDescriptor getHost();
-
     /**
      * <code>.protocol.HostDescriptor Host = 2;</code>
      */
@@ -5581,18 +4988,14 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.StorageMessage Storage = 20;</code>
-     *
      * @return Whether the storage field is set.
      */
     boolean hasStorage();
-
     /**
      * <code>.protocol.StorageMessage Storage = 20;</code>
-     *
      * @return The storage.
      */
     com.ones.openplatform.protocol.Cmdb.StorageMessage getStorage();
-
     /**
      * <code>.protocol.StorageMessage Storage = 20;</code>
      */
@@ -5600,24 +5003,19 @@ public final class Cmdb {
 
     /**
      * <code>.protocol.PropertiesMessage Properties = 21;</code>
-     *
      * @return Whether the properties field is set.
      */
     boolean hasProperties();
-
     /**
      * <code>.protocol.PropertiesMessage Properties = 21;</code>
-     *
      * @return The properties.
      */
     com.ones.openplatform.protocol.Cmdb.PropertiesMessage getProperties();
-
     /**
      * <code>.protocol.PropertiesMessage Properties = 21;</code>
      */
     com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder getPropertiesOrBuilder();
   }
-
   /**
    * Protobuf type {@code protocol.CmdbMessage}
    */
@@ -5625,20 +5023,18 @@ public final class Cmdb {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:protocol.CmdbMessage)
       CmdbMessageOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     // Use CmdbMessage.newBuilder() to construct.
-    private CmdbMessage(final com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private CmdbMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private CmdbMessage() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        final UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new CmdbMessage();
     }
 
@@ -5647,79 +5043,78 @@ public final class Cmdb {
     getUnknownFields() {
       return this.unknownFields;
     }
-
     private CmdbMessage(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      final com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
-          final int tag = input.readTag();
+          int tag = input.readTag();
           switch (tag) {
             case 0:
               done = true;
               break;
             case 10: {
               com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder subBuilder = null;
-              if (this.sender_ != null) {
-                subBuilder = this.sender_.toBuilder();
+              if (sender_ != null) {
+                subBuilder = sender_.toBuilder();
               }
-              this.sender_ = input.readMessage(com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.parser(), extensionRegistry);
+              sender_ = input.readMessage(com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.sender_);
-                this.sender_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(sender_);
+                sender_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 18: {
               com.ones.openplatform.protocol.Common.HostDescriptor.Builder subBuilder = null;
-              if (this.host_ != null) {
-                subBuilder = this.host_.toBuilder();
+              if (host_ != null) {
+                subBuilder = host_.toBuilder();
               }
-              this.host_ = input.readMessage(com.ones.openplatform.protocol.Common.HostDescriptor.parser(), extensionRegistry);
+              host_ = input.readMessage(com.ones.openplatform.protocol.Common.HostDescriptor.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.host_);
-                this.host_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(host_);
+                host_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 162: {
               com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder subBuilder = null;
-              if (this.storage_ != null) {
-                subBuilder = this.storage_.toBuilder();
+              if (storage_ != null) {
+                subBuilder = storage_.toBuilder();
               }
-              this.storage_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.StorageMessage.parser(), extensionRegistry);
+              storage_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.StorageMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.storage_);
-                this.storage_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(storage_);
+                storage_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 170: {
               com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder subBuilder = null;
-              if (this.properties_ != null) {
-                subBuilder = this.properties_.toBuilder();
+              if (properties_ != null) {
+                subBuilder = properties_.toBuilder();
               }
-              this.properties_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.PropertiesMessage.parser(), extensionRegistry);
+              properties_ = input.readMessage(com.ones.openplatform.protocol.Cmdb.PropertiesMessage.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(this.properties_);
-                this.properties_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(properties_);
+                properties_ = subBuilder.buildPartial();
               }
 
               break;
             }
             default: {
-              if (!this.parseUnknownField(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5727,25 +5122,24 @@ public final class Cmdb {
             }
           }
         }
-      } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (final java.io.IOException e) {
+      } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
-        this.makeExtensionsImmutable();
+        makeExtensionsImmutable();
       }
     }
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_CmdbMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_CmdbMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ones.openplatform.protocol.Cmdb.CmdbMessage.class, com.ones.openplatform.protocol.Cmdb.CmdbMessage.Builder.class);
@@ -5753,35 +5147,30 @@ public final class Cmdb {
 
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.ones.openplatform.protocol.Common.PluginInstanceDescriptor sender_;
-
     /**
      * <pre>
      * 添加消息头，路由数据
      * </pre>
      *
      * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
-     *
      * @return Whether the sender field is set.
      */
     @java.lang.Override
     public boolean hasSender() {
-      return this.sender_ != null;
+      return sender_ != null;
     }
-
     /**
      * <pre>
      * 添加消息头，路由数据
      * </pre>
      *
      * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
-     *
      * @return The sender.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.PluginInstanceDescriptor getSender() {
-      return this.sender_ == null ? com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.getDefaultInstance() : this.sender_;
+      return sender_ == null ? com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.getDefaultInstance() : sender_;
     }
-
     /**
      * <pre>
      * 添加消息头，路由数据
@@ -5791,339 +5180,283 @@ public final class Cmdb {
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.PluginInstanceDescriptorOrBuilder getSenderOrBuilder() {
-      return this.getSender();
+      return getSender();
     }
 
     public static final int HOST_FIELD_NUMBER = 2;
     private com.ones.openplatform.protocol.Common.HostDescriptor host_;
-
     /**
      * <code>.protocol.HostDescriptor Host = 2;</code>
-     *
      * @return Whether the host field is set.
      */
     @java.lang.Override
     public boolean hasHost() {
-      return this.host_ != null;
+      return host_ != null;
     }
-
     /**
      * <code>.protocol.HostDescriptor Host = 2;</code>
-     *
      * @return The host.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.HostDescriptor getHost() {
-      return this.host_ == null ? com.ones.openplatform.protocol.Common.HostDescriptor.getDefaultInstance() : this.host_;
+      return host_ == null ? com.ones.openplatform.protocol.Common.HostDescriptor.getDefaultInstance() : host_;
     }
-
     /**
      * <code>.protocol.HostDescriptor Host = 2;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Common.HostDescriptorOrBuilder getHostOrBuilder() {
-      return this.getHost();
+      return getHost();
     }
 
     public static final int STORAGE_FIELD_NUMBER = 20;
     private com.ones.openplatform.protocol.Cmdb.StorageMessage storage_;
-
     /**
      * <code>.protocol.StorageMessage Storage = 20;</code>
-     *
      * @return Whether the storage field is set.
      */
     @java.lang.Override
     public boolean hasStorage() {
-      return this.storage_ != null;
+      return storage_ != null;
     }
-
     /**
      * <code>.protocol.StorageMessage Storage = 20;</code>
-     *
      * @return The storage.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.StorageMessage getStorage() {
-      return this.storage_ == null ? com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance() : this.storage_;
+      return storage_ == null ? com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance() : storage_;
     }
-
     /**
      * <code>.protocol.StorageMessage Storage = 20;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.StorageMessageOrBuilder getStorageOrBuilder() {
-      return this.getStorage();
+      return getStorage();
     }
 
     public static final int PROPERTIES_FIELD_NUMBER = 21;
     private com.ones.openplatform.protocol.Cmdb.PropertiesMessage properties_;
-
     /**
      * <code>.protocol.PropertiesMessage Properties = 21;</code>
-     *
      * @return Whether the properties field is set.
      */
     @java.lang.Override
     public boolean hasProperties() {
-      return this.properties_ != null;
+      return properties_ != null;
     }
-
     /**
      * <code>.protocol.PropertiesMessage Properties = 21;</code>
-     *
      * @return The properties.
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.PropertiesMessage getProperties() {
-      return this.properties_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance() : this.properties_;
+      return properties_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance() : properties_;
     }
-
     /**
      * <code>.protocol.PropertiesMessage Properties = 21;</code>
      */
     @java.lang.Override
     public com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder getPropertiesOrBuilder() {
-      return this.getProperties();
+      return getProperties();
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
-      final byte isInitialized = this.memoizedIsInitialized;
-      if (isInitialized == 1) {
-        return true;
-      }
-      if (isInitialized == 0) {
-        return false;
-      }
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      this.memoizedIsInitialized = 1;
+      memoizedIsInitialized = 1;
       return true;
     }
 
     @java.lang.Override
-    public void writeTo(final com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
-      if (this.sender_ != null) {
-        output.writeMessage(1, this.getSender());
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sender_ != null) {
+        output.writeMessage(1, getSender());
       }
-      if (this.host_ != null) {
-        output.writeMessage(2, this.getHost());
+      if (host_ != null) {
+        output.writeMessage(2, getHost());
       }
-      if (this.storage_ != null) {
-        output.writeMessage(20, this.getStorage());
+      if (storage_ != null) {
+        output.writeMessage(20, getStorage());
       }
-      if (this.properties_ != null) {
-        output.writeMessage(21, this.getProperties());
+      if (properties_ != null) {
+        output.writeMessage(21, getProperties());
       }
-      this.unknownFields.writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
     public int getSerializedSize() {
-      int size = this.memoizedSize;
-      if (size != -1) {
-        return size;
-      }
+      int size = memoizedSize;
+      if (size != -1) return size;
 
       size = 0;
-      if (this.sender_ != null) {
+      if (sender_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, this.getSender());
+          .computeMessageSize(1, getSender());
       }
-      if (this.host_ != null) {
+      if (host_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, this.getHost());
+          .computeMessageSize(2, getHost());
       }
-      if (this.storage_ != null) {
+      if (storage_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(20, this.getStorage());
+          .computeMessageSize(20, getStorage());
       }
-      if (this.properties_ != null) {
+      if (properties_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(21, this.getProperties());
+          .computeMessageSize(21, getProperties());
       }
-      size += this.unknownFields.getSerializedSize();
-      this.memoizedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.ones.openplatform.protocol.Cmdb.CmdbMessage)) {
         return super.equals(obj);
       }
-      final com.ones.openplatform.protocol.Cmdb.CmdbMessage other = (com.ones.openplatform.protocol.Cmdb.CmdbMessage) obj;
+      com.ones.openplatform.protocol.Cmdb.CmdbMessage other = (com.ones.openplatform.protocol.Cmdb.CmdbMessage) obj;
 
-      if (this.hasSender() != other.hasSender()) {
-        return false;
+      if (hasSender() != other.hasSender()) return false;
+      if (hasSender()) {
+        if (!getSender()
+            .equals(other.getSender())) return false;
       }
-      if (this.hasSender()) {
-        if (!this.getSender()
-            .equals(other.getSender())) {
-          return false;
-        }
+      if (hasHost() != other.hasHost()) return false;
+      if (hasHost()) {
+        if (!getHost()
+            .equals(other.getHost())) return false;
       }
-      if (this.hasHost() != other.hasHost()) {
-        return false;
+      if (hasStorage() != other.hasStorage()) return false;
+      if (hasStorage()) {
+        if (!getStorage()
+            .equals(other.getStorage())) return false;
       }
-      if (this.hasHost()) {
-        if (!this.getHost()
-            .equals(other.getHost())) {
-          return false;
-        }
+      if (hasProperties() != other.hasProperties()) return false;
+      if (hasProperties()) {
+        if (!getProperties()
+            .equals(other.getProperties())) return false;
       }
-      if (this.hasStorage() != other.hasStorage()) {
-        return false;
-      }
-      if (this.hasStorage()) {
-        if (!this.getStorage()
-            .equals(other.getStorage())) {
-          return false;
-        }
-      }
-      if (this.hasProperties() != other.hasProperties()) {
-        return false;
-      }
-      if (this.hasProperties()) {
-        if (!this.getProperties()
-            .equals(other.getProperties())) {
-          return false;
-        }
-      }
-      if (!this.unknownFields.equals(other.unknownFields)) {
-        return false;
-      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
     @java.lang.Override
     public int hashCode() {
-      if (this.memoizedHashCode != 0) {
-        return this.memoizedHashCode;
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (this.hasSender()) {
+      if (hasSender()) {
         hash = (37 * hash) + SENDER_FIELD_NUMBER;
-        hash = (53 * hash) + this.getSender().hashCode();
+        hash = (53 * hash) + getSender().hashCode();
       }
-      if (this.hasHost()) {
+      if (hasHost()) {
         hash = (37 * hash) + HOST_FIELD_NUMBER;
-        hash = (53 * hash) + this.getHost().hashCode();
+        hash = (53 * hash) + getHost().hashCode();
       }
-      if (this.hasStorage()) {
+      if (hasStorage()) {
         hash = (37 * hash) + STORAGE_FIELD_NUMBER;
-        hash = (53 * hash) + this.getStorage().hashCode();
+        hash = (53 * hash) + getStorage().hashCode();
       }
-      if (this.hasProperties()) {
+      if (hasProperties()) {
         hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
-        hash = (53 * hash) + this.getProperties().hashCode();
+        hash = (53 * hash) + getProperties().hashCode();
       }
-      hash = (29 * hash) + this.unknownFields.hashCode();
-      this.memoizedHashCode = hash;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
       return hash;
     }
 
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final java.nio.ByteBuffer data)
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final java.nio.ByteBuffer data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final com.google.protobuf.ByteString data)
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final com.google.protobuf.ByteString data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(final byte[] data)
+    public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final byte[] data,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseDelimitedFrom(final java.io.InputStream input)
+    public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseDelimitedFrom(
-        final java.io.InputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-
     public static com.ones.openplatform.protocol.Cmdb.CmdbMessage parseFrom(
-        final com.google.protobuf.CodedInputStream input,
-        final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(final com.ones.openplatform.protocol.Cmdb.CmdbMessage prototype) {
+    public static Builder newBuilder(com.ones.openplatform.protocol.Cmdb.CmdbMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -6132,11 +5465,10 @@ public final class Cmdb {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      final Builder builder = new Builder(parent);
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code protocol.CmdbMessage}
      */
@@ -6145,13 +5477,13 @@ public final class Cmdb {
         // @@protoc_insertion_point(builder_implements:protocol.CmdbMessage)
         com.ones.openplatform.protocol.Cmdb.CmdbMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_CmdbMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_CmdbMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.ones.openplatform.protocol.Cmdb.CmdbMessage.class, com.ones.openplatform.protocol.Cmdb.CmdbMessage.Builder.class);
@@ -6159,54 +5491,52 @@ public final class Cmdb {
 
       // Construct using com.ones.openplatform.protocol.Cmdb.CmdbMessage.newBuilder()
       private Builder() {
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
-          final com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        this.maybeForceBuilderInitialization();
+        maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
+                .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (this.senderBuilder_ == null) {
-          this.sender_ = null;
+        if (senderBuilder_ == null) {
+          sender_ = null;
         } else {
-          this.sender_ = null;
-          this.senderBuilder_ = null;
+          sender_ = null;
+          senderBuilder_ = null;
         }
-        if (this.hostBuilder_ == null) {
-          this.host_ = null;
+        if (hostBuilder_ == null) {
+          host_ = null;
         } else {
-          this.host_ = null;
-          this.hostBuilder_ = null;
+          host_ = null;
+          hostBuilder_ = null;
         }
-        if (this.storageBuilder_ == null) {
-          this.storage_ = null;
+        if (storageBuilder_ == null) {
+          storage_ = null;
         } else {
-          this.storage_ = null;
-          this.storageBuilder_ = null;
+          storage_ = null;
+          storageBuilder_ = null;
         }
-        if (this.propertiesBuilder_ == null) {
-          this.properties_ = null;
+        if (propertiesBuilder_ == null) {
+          properties_ = null;
         } else {
-          this.properties_ = null;
-          this.propertiesBuilder_ = null;
+          properties_ = null;
+          propertiesBuilder_ = null;
         }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return com.ones.openplatform.protocol.Cmdb.internal_static_protocol_CmdbMessage_descriptor;
       }
 
@@ -6217,7 +5547,7 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.CmdbMessage build() {
-        final com.ones.openplatform.protocol.Cmdb.CmdbMessage result = this.buildPartial();
+        com.ones.openplatform.protocol.Cmdb.CmdbMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6226,28 +5556,28 @@ public final class Cmdb {
 
       @java.lang.Override
       public com.ones.openplatform.protocol.Cmdb.CmdbMessage buildPartial() {
-        final com.ones.openplatform.protocol.Cmdb.CmdbMessage result = new com.ones.openplatform.protocol.Cmdb.CmdbMessage(this);
-        if (this.senderBuilder_ == null) {
-          result.sender_ = this.sender_;
+        com.ones.openplatform.protocol.Cmdb.CmdbMessage result = new com.ones.openplatform.protocol.Cmdb.CmdbMessage(this);
+        if (senderBuilder_ == null) {
+          result.sender_ = sender_;
         } else {
-          result.sender_ = this.senderBuilder_.build();
+          result.sender_ = senderBuilder_.build();
         }
-        if (this.hostBuilder_ == null) {
-          result.host_ = this.host_;
+        if (hostBuilder_ == null) {
+          result.host_ = host_;
         } else {
-          result.host_ = this.hostBuilder_.build();
+          result.host_ = hostBuilder_.build();
         }
-        if (this.storageBuilder_ == null) {
-          result.storage_ = this.storage_;
+        if (storageBuilder_ == null) {
+          result.storage_ = storage_;
         } else {
-          result.storage_ = this.storageBuilder_.build();
+          result.storage_ = storageBuilder_.build();
         }
-        if (this.propertiesBuilder_ == null) {
-          result.properties_ = this.properties_;
+        if (propertiesBuilder_ == null) {
+          result.properties_ = properties_;
         } else {
-          result.properties_ = this.propertiesBuilder_.build();
+          result.properties_ = propertiesBuilder_.build();
         }
-        this.onBuilt();
+        onBuilt();
         return result;
       }
 
@@ -6255,68 +5585,60 @@ public final class Cmdb {
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
       public Builder clearField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
       public Builder clearOneof(
-          final com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final int index, final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          final com.google.protobuf.Descriptors.FieldDescriptor field,
-          final java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
-      public Builder mergeFrom(final com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.ones.openplatform.protocol.Cmdb.CmdbMessage) {
-          return this.mergeFrom((com.ones.openplatform.protocol.Cmdb.CmdbMessage) other);
+          return mergeFrom((com.ones.openplatform.protocol.Cmdb.CmdbMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(final com.ones.openplatform.protocol.Cmdb.CmdbMessage other) {
-        if (other == com.ones.openplatform.protocol.Cmdb.CmdbMessage.getDefaultInstance()) {
-          return this;
-        }
+      public Builder mergeFrom(com.ones.openplatform.protocol.Cmdb.CmdbMessage other) {
+        if (other == com.ones.openplatform.protocol.Cmdb.CmdbMessage.getDefaultInstance()) return this;
         if (other.hasSender()) {
-          this.mergeSender(other.getSender());
+          mergeSender(other.getSender());
         }
         if (other.hasHost()) {
-          this.mergeHost(other.getHost());
+          mergeHost(other.getHost());
         }
         if (other.hasStorage()) {
-          this.mergeStorage(other.getStorage());
+          mergeStorage(other.getStorage());
         }
         if (other.hasProperties()) {
-          this.mergeProperties(other.getProperties());
+          mergeProperties(other.getProperties());
         }
         this.mergeUnknownFields(other.unknownFields);
-        this.onChanged();
+        onChanged();
         return this;
       }
 
@@ -6327,18 +5649,18 @@ public final class Cmdb {
 
       @java.lang.Override
       public Builder mergeFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.ones.openplatform.protocol.Cmdb.CmdbMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (final com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.ones.openplatform.protocol.Cmdb.CmdbMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
-            this.mergeFrom(parsedMessage);
+            mergeFrom(parsedMessage);
           }
         }
         return this;
@@ -6347,39 +5669,32 @@ public final class Cmdb {
       private com.ones.openplatform.protocol.Common.PluginInstanceDescriptor sender_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Common.PluginInstanceDescriptor, com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder, com.ones.openplatform.protocol.Common.PluginInstanceDescriptorOrBuilder> senderBuilder_;
-
       /**
        * <pre>
        * 添加消息头，路由数据
        * </pre>
        *
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
-       *
        * @return Whether the sender field is set.
        */
-      @Override
       public boolean hasSender() {
-        return this.senderBuilder_ != null || this.sender_ != null;
+        return senderBuilder_ != null || sender_ != null;
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
        * </pre>
        *
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
-       *
        * @return The sender.
        */
-      @Override
       public com.ones.openplatform.protocol.Common.PluginInstanceDescriptor getSender() {
-        if (this.senderBuilder_ == null) {
-          return this.sender_ == null ? com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.getDefaultInstance() : this.sender_;
+        if (senderBuilder_ == null) {
+          return sender_ == null ? com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.getDefaultInstance() : sender_;
         } else {
-          return this.senderBuilder_.getMessage();
+          return senderBuilder_.getMessage();
         }
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
@@ -6387,20 +5702,19 @@ public final class Cmdb {
        *
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
        */
-      public Builder setSender(final com.ones.openplatform.protocol.Common.PluginInstanceDescriptor value) {
-        if (this.senderBuilder_ == null) {
+      public Builder setSender(com.ones.openplatform.protocol.Common.PluginInstanceDescriptor value) {
+        if (senderBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.sender_ = value;
-          this.onChanged();
+          sender_ = value;
+          onChanged();
         } else {
-          this.senderBuilder_.setMessage(value);
+          senderBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
@@ -6409,17 +5723,16 @@ public final class Cmdb {
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
        */
       public Builder setSender(
-          final com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder builderForValue) {
-        if (this.senderBuilder_ == null) {
-          this.sender_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder builderForValue) {
+        if (senderBuilder_ == null) {
+          sender_ = builderForValue.build();
+          onChanged();
         } else {
-          this.senderBuilder_.setMessage(builderForValue.build());
+          senderBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
@@ -6427,22 +5740,21 @@ public final class Cmdb {
        *
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
        */
-      public Builder mergeSender(final com.ones.openplatform.protocol.Common.PluginInstanceDescriptor value) {
-        if (this.senderBuilder_ == null) {
-          if (this.sender_ != null) {
-            this.sender_ =
-                com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.newBuilder(this.sender_).mergeFrom(value).buildPartial();
+      public Builder mergeSender(com.ones.openplatform.protocol.Common.PluginInstanceDescriptor value) {
+        if (senderBuilder_ == null) {
+          if (sender_ != null) {
+            sender_ =
+              com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.newBuilder(sender_).mergeFrom(value).buildPartial();
           } else {
-            this.sender_ = value;
+            sender_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.senderBuilder_.mergeFrom(value);
+          senderBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
@@ -6451,17 +5763,16 @@ public final class Cmdb {
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
        */
       public Builder clearSender() {
-        if (this.senderBuilder_ == null) {
-          this.sender_ = null;
-          this.onChanged();
+        if (senderBuilder_ == null) {
+          sender_ = null;
+          onChanged();
         } else {
-          this.sender_ = null;
-          this.senderBuilder_ = null;
+          sender_ = null;
+          senderBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
@@ -6470,11 +5781,10 @@ public final class Cmdb {
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
        */
       public com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder getSenderBuilder() {
-
-        this.onChanged();
-        return this.getSenderFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getSenderFieldBuilder().getBuilder();
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
@@ -6482,16 +5792,14 @@ public final class Cmdb {
        *
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Common.PluginInstanceDescriptorOrBuilder getSenderOrBuilder() {
-        if (this.senderBuilder_ != null) {
-          return this.senderBuilder_.getMessageOrBuilder();
+        if (senderBuilder_ != null) {
+          return senderBuilder_.getMessageOrBuilder();
         } else {
-          return this.sender_ == null ?
-              com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.getDefaultInstance() : this.sender_;
+          return sender_ == null ?
+              com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.getDefaultInstance() : sender_;
         }
       }
-
       /**
        * <pre>
        * 添加消息头，路由数据
@@ -6500,418 +5808,375 @@ public final class Cmdb {
        * <code>.protocol.PluginInstanceDescriptor Sender = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Common.PluginInstanceDescriptor, com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder, com.ones.openplatform.protocol.Common.PluginInstanceDescriptorOrBuilder>
-      getSenderFieldBuilder() {
-        if (this.senderBuilder_ == null) {
-          this.senderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Common.PluginInstanceDescriptor, com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder, com.ones.openplatform.protocol.Common.PluginInstanceDescriptorOrBuilder> 
+          getSenderFieldBuilder() {
+        if (senderBuilder_ == null) {
+          senderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Common.PluginInstanceDescriptor, com.ones.openplatform.protocol.Common.PluginInstanceDescriptor.Builder, com.ones.openplatform.protocol.Common.PluginInstanceDescriptorOrBuilder>(
-              this.getSender(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.sender_ = null;
+                  getSender(),
+                  getParentForChildren(),
+                  isClean());
+          sender_ = null;
         }
-        return this.senderBuilder_;
+        return senderBuilder_;
       }
 
       private com.ones.openplatform.protocol.Common.HostDescriptor host_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Common.HostDescriptor, com.ones.openplatform.protocol.Common.HostDescriptor.Builder, com.ones.openplatform.protocol.Common.HostDescriptorOrBuilder> hostBuilder_;
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
-       *
        * @return Whether the host field is set.
        */
-      @Override
       public boolean hasHost() {
-        return this.hostBuilder_ != null || this.host_ != null;
+        return hostBuilder_ != null || host_ != null;
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
-       *
        * @return The host.
        */
-      @Override
       public com.ones.openplatform.protocol.Common.HostDescriptor getHost() {
-        if (this.hostBuilder_ == null) {
-          return this.host_ == null ? com.ones.openplatform.protocol.Common.HostDescriptor.getDefaultInstance() : this.host_;
+        if (hostBuilder_ == null) {
+          return host_ == null ? com.ones.openplatform.protocol.Common.HostDescriptor.getDefaultInstance() : host_;
         } else {
-          return this.hostBuilder_.getMessage();
+          return hostBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
        */
-      public Builder setHost(final com.ones.openplatform.protocol.Common.HostDescriptor value) {
-        if (this.hostBuilder_ == null) {
+      public Builder setHost(com.ones.openplatform.protocol.Common.HostDescriptor value) {
+        if (hostBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.host_ = value;
-          this.onChanged();
+          host_ = value;
+          onChanged();
         } else {
-          this.hostBuilder_.setMessage(value);
+          hostBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
        */
       public Builder setHost(
-          final com.ones.openplatform.protocol.Common.HostDescriptor.Builder builderForValue) {
-        if (this.hostBuilder_ == null) {
-          this.host_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Common.HostDescriptor.Builder builderForValue) {
+        if (hostBuilder_ == null) {
+          host_ = builderForValue.build();
+          onChanged();
         } else {
-          this.hostBuilder_.setMessage(builderForValue.build());
+          hostBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
        */
-      public Builder mergeHost(final com.ones.openplatform.protocol.Common.HostDescriptor value) {
-        if (this.hostBuilder_ == null) {
-          if (this.host_ != null) {
-            this.host_ =
-                com.ones.openplatform.protocol.Common.HostDescriptor.newBuilder(this.host_).mergeFrom(value).buildPartial();
+      public Builder mergeHost(com.ones.openplatform.protocol.Common.HostDescriptor value) {
+        if (hostBuilder_ == null) {
+          if (host_ != null) {
+            host_ =
+              com.ones.openplatform.protocol.Common.HostDescriptor.newBuilder(host_).mergeFrom(value).buildPartial();
           } else {
-            this.host_ = value;
+            host_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.hostBuilder_.mergeFrom(value);
+          hostBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
        */
       public Builder clearHost() {
-        if (this.hostBuilder_ == null) {
-          this.host_ = null;
-          this.onChanged();
+        if (hostBuilder_ == null) {
+          host_ = null;
+          onChanged();
         } else {
-          this.host_ = null;
-          this.hostBuilder_ = null;
+          host_ = null;
+          hostBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
        */
       public com.ones.openplatform.protocol.Common.HostDescriptor.Builder getHostBuilder() {
-
-        this.onChanged();
-        return this.getHostFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getHostFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Common.HostDescriptorOrBuilder getHostOrBuilder() {
-        if (this.hostBuilder_ != null) {
-          return this.hostBuilder_.getMessageOrBuilder();
+        if (hostBuilder_ != null) {
+          return hostBuilder_.getMessageOrBuilder();
         } else {
-          return this.host_ == null ?
-              com.ones.openplatform.protocol.Common.HostDescriptor.getDefaultInstance() : this.host_;
+          return host_ == null ?
+              com.ones.openplatform.protocol.Common.HostDescriptor.getDefaultInstance() : host_;
         }
       }
-
       /**
        * <code>.protocol.HostDescriptor Host = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Common.HostDescriptor, com.ones.openplatform.protocol.Common.HostDescriptor.Builder, com.ones.openplatform.protocol.Common.HostDescriptorOrBuilder>
-      getHostFieldBuilder() {
-        if (this.hostBuilder_ == null) {
-          this.hostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Common.HostDescriptor, com.ones.openplatform.protocol.Common.HostDescriptor.Builder, com.ones.openplatform.protocol.Common.HostDescriptorOrBuilder> 
+          getHostFieldBuilder() {
+        if (hostBuilder_ == null) {
+          hostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Common.HostDescriptor, com.ones.openplatform.protocol.Common.HostDescriptor.Builder, com.ones.openplatform.protocol.Common.HostDescriptorOrBuilder>(
-              this.getHost(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.host_ = null;
+                  getHost(),
+                  getParentForChildren(),
+                  isClean());
+          host_ = null;
         }
-        return this.hostBuilder_;
+        return hostBuilder_;
       }
 
       private com.ones.openplatform.protocol.Cmdb.StorageMessage storage_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Cmdb.StorageMessage, com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageMessageOrBuilder> storageBuilder_;
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
-       *
        * @return Whether the storage field is set.
        */
-      @Override
       public boolean hasStorage() {
-        return this.storageBuilder_ != null || this.storage_ != null;
+        return storageBuilder_ != null || storage_ != null;
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
-       *
        * @return The storage.
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.StorageMessage getStorage() {
-        if (this.storageBuilder_ == null) {
-          return this.storage_ == null ? com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance() : this.storage_;
+        if (storageBuilder_ == null) {
+          return storage_ == null ? com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance() : storage_;
         } else {
-          return this.storageBuilder_.getMessage();
+          return storageBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
        */
-      public Builder setStorage(final com.ones.openplatform.protocol.Cmdb.StorageMessage value) {
-        if (this.storageBuilder_ == null) {
+      public Builder setStorage(com.ones.openplatform.protocol.Cmdb.StorageMessage value) {
+        if (storageBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.storage_ = value;
-          this.onChanged();
+          storage_ = value;
+          onChanged();
         } else {
-          this.storageBuilder_.setMessage(value);
+          storageBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
        */
       public Builder setStorage(
-          final com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder builderForValue) {
-        if (this.storageBuilder_ == null) {
-          this.storage_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder builderForValue) {
+        if (storageBuilder_ == null) {
+          storage_ = builderForValue.build();
+          onChanged();
         } else {
-          this.storageBuilder_.setMessage(builderForValue.build());
+          storageBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
        */
-      public Builder mergeStorage(final com.ones.openplatform.protocol.Cmdb.StorageMessage value) {
-        if (this.storageBuilder_ == null) {
-          if (this.storage_ != null) {
-            this.storage_ =
-                com.ones.openplatform.protocol.Cmdb.StorageMessage.newBuilder(this.storage_).mergeFrom(value).buildPartial();
+      public Builder mergeStorage(com.ones.openplatform.protocol.Cmdb.StorageMessage value) {
+        if (storageBuilder_ == null) {
+          if (storage_ != null) {
+            storage_ =
+              com.ones.openplatform.protocol.Cmdb.StorageMessage.newBuilder(storage_).mergeFrom(value).buildPartial();
           } else {
-            this.storage_ = value;
+            storage_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.storageBuilder_.mergeFrom(value);
+          storageBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
        */
       public Builder clearStorage() {
-        if (this.storageBuilder_ == null) {
-          this.storage_ = null;
-          this.onChanged();
+        if (storageBuilder_ == null) {
+          storage_ = null;
+          onChanged();
         } else {
-          this.storage_ = null;
-          this.storageBuilder_ = null;
+          storage_ = null;
+          storageBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
        */
       public com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder getStorageBuilder() {
-
-        this.onChanged();
-        return this.getStorageFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getStorageFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.StorageMessageOrBuilder getStorageOrBuilder() {
-        if (this.storageBuilder_ != null) {
-          return this.storageBuilder_.getMessageOrBuilder();
+        if (storageBuilder_ != null) {
+          return storageBuilder_.getMessageOrBuilder();
         } else {
-          return this.storage_ == null ?
-              com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance() : this.storage_;
+          return storage_ == null ?
+              com.ones.openplatform.protocol.Cmdb.StorageMessage.getDefaultInstance() : storage_;
         }
       }
-
       /**
        * <code>.protocol.StorageMessage Storage = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Cmdb.StorageMessage, com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageMessageOrBuilder>
-      getStorageFieldBuilder() {
-        if (this.storageBuilder_ == null) {
-          this.storageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Cmdb.StorageMessage, com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageMessageOrBuilder> 
+          getStorageFieldBuilder() {
+        if (storageBuilder_ == null) {
+          storageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Cmdb.StorageMessage, com.ones.openplatform.protocol.Cmdb.StorageMessage.Builder, com.ones.openplatform.protocol.Cmdb.StorageMessageOrBuilder>(
-              this.getStorage(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.storage_ = null;
+                  getStorage(),
+                  getParentForChildren(),
+                  isClean());
+          storage_ = null;
         }
-        return this.storageBuilder_;
+        return storageBuilder_;
       }
 
       private com.ones.openplatform.protocol.Cmdb.PropertiesMessage properties_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ones.openplatform.protocol.Cmdb.PropertiesMessage, com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder> propertiesBuilder_;
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
-       *
        * @return Whether the properties field is set.
        */
-      @Override
       public boolean hasProperties() {
-        return this.propertiesBuilder_ != null || this.properties_ != null;
+        return propertiesBuilder_ != null || properties_ != null;
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
-       *
        * @return The properties.
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesMessage getProperties() {
-        if (this.propertiesBuilder_ == null) {
-          return this.properties_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance() : this.properties_;
+        if (propertiesBuilder_ == null) {
+          return properties_ == null ? com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance() : properties_;
         } else {
-          return this.propertiesBuilder_.getMessage();
+          return propertiesBuilder_.getMessage();
         }
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
        */
-      public Builder setProperties(final com.ones.openplatform.protocol.Cmdb.PropertiesMessage value) {
-        if (this.propertiesBuilder_ == null) {
+      public Builder setProperties(com.ones.openplatform.protocol.Cmdb.PropertiesMessage value) {
+        if (propertiesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          this.properties_ = value;
-          this.onChanged();
+          properties_ = value;
+          onChanged();
         } else {
-          this.propertiesBuilder_.setMessage(value);
+          propertiesBuilder_.setMessage(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
        */
       public Builder setProperties(
-          final com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder builderForValue) {
-        if (this.propertiesBuilder_ == null) {
-          this.properties_ = builderForValue.build();
-          this.onChanged();
+          com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder builderForValue) {
+        if (propertiesBuilder_ == null) {
+          properties_ = builderForValue.build();
+          onChanged();
         } else {
-          this.propertiesBuilder_.setMessage(builderForValue.build());
+          propertiesBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
        */
-      public Builder mergeProperties(final com.ones.openplatform.protocol.Cmdb.PropertiesMessage value) {
-        if (this.propertiesBuilder_ == null) {
-          if (this.properties_ != null) {
-            this.properties_ =
-                com.ones.openplatform.protocol.Cmdb.PropertiesMessage.newBuilder(this.properties_).mergeFrom(value).buildPartial();
+      public Builder mergeProperties(com.ones.openplatform.protocol.Cmdb.PropertiesMessage value) {
+        if (propertiesBuilder_ == null) {
+          if (properties_ != null) {
+            properties_ =
+              com.ones.openplatform.protocol.Cmdb.PropertiesMessage.newBuilder(properties_).mergeFrom(value).buildPartial();
           } else {
-            this.properties_ = value;
+            properties_ = value;
           }
-          this.onChanged();
+          onChanged();
         } else {
-          this.propertiesBuilder_.mergeFrom(value);
+          propertiesBuilder_.mergeFrom(value);
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
        */
       public Builder clearProperties() {
-        if (this.propertiesBuilder_ == null) {
-          this.properties_ = null;
-          this.onChanged();
+        if (propertiesBuilder_ == null) {
+          properties_ = null;
+          onChanged();
         } else {
-          this.properties_ = null;
-          this.propertiesBuilder_ = null;
+          properties_ = null;
+          propertiesBuilder_ = null;
         }
 
         return this;
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
        */
       public com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder getPropertiesBuilder() {
-
-        this.onChanged();
-        return this.getPropertiesFieldBuilder().getBuilder();
+        
+        onChanged();
+        return getPropertiesFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
        */
-      @Override
       public com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder getPropertiesOrBuilder() {
-        if (this.propertiesBuilder_ != null) {
-          return this.propertiesBuilder_.getMessageOrBuilder();
+        if (propertiesBuilder_ != null) {
+          return propertiesBuilder_.getMessageOrBuilder();
         } else {
-          return this.properties_ == null ?
-              com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance() : this.properties_;
+          return properties_ == null ?
+              com.ones.openplatform.protocol.Cmdb.PropertiesMessage.getDefaultInstance() : properties_;
         }
       }
-
       /**
        * <code>.protocol.PropertiesMessage Properties = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ones.openplatform.protocol.Cmdb.PropertiesMessage, com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder>
-      getPropertiesFieldBuilder() {
-        if (this.propertiesBuilder_ == null) {
-          this.propertiesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          com.ones.openplatform.protocol.Cmdb.PropertiesMessage, com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder> 
+          getPropertiesFieldBuilder() {
+        if (propertiesBuilder_ == null) {
+          propertiesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.ones.openplatform.protocol.Cmdb.PropertiesMessage, com.ones.openplatform.protocol.Cmdb.PropertiesMessage.Builder, com.ones.openplatform.protocol.Cmdb.PropertiesMessageOrBuilder>(
-              this.getProperties(),
-              this.getParentForChildren(),
-              this.isClean());
-          this.properties_ = null;
+                  getProperties(),
+                  getParentForChildren(),
+                  isClean());
+          properties_ = null;
         }
-        return this.propertiesBuilder_;
+        return propertiesBuilder_;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6924,12 +6189,12 @@ public final class Cmdb {
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:protocol.CmdbMessage)
     }
 
     // @@protoc_insertion_point(class_scope:protocol.CmdbMessage)
     private static final com.ones.openplatform.protocol.Cmdb.CmdbMessage DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.ones.openplatform.protocol.Cmdb.CmdbMessage();
     }
@@ -6942,8 +6207,8 @@ public final class Cmdb {
         PARSER = new com.google.protobuf.AbstractParser<CmdbMessage>() {
       @java.lang.Override
       public CmdbMessage parsePartialFrom(
-          final com.google.protobuf.CodedInputStream input,
-          final com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new CmdbMessage(input, extensionRegistry);
       }
@@ -6966,121 +6231,119 @@ public final class Cmdb {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_protocol_StorageRequestMessage_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_protocol_StorageRequestMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_StorageRequestMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_protocol_StorageResponseMessage_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_protocol_StorageResponseMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_StorageResponseMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_protocol_StorageMessage_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_protocol_StorageMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_StorageMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_protocol_PropertiesRequestMessage_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_protocol_PropertiesRequestMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_PropertiesRequestMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_protocol_PropertiesResponseMessage_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_protocol_PropertiesResponseMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_PropertiesResponseMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_protocol_PropertiesMessage_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_protocol_PropertiesMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_PropertiesMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_protocol_CmdbMessage_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_protocol_CmdbMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_CmdbMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-  getDescriptor() {
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
-
   static {
-    final java.lang.String[] descriptorData = {
-        "\n\ncmdb.proto\022\010protocol\032\014common.proto\"3\n\025" +
-            "StorageRequestMessage\022\013\n\003Key\030\001 \001(\t\022\r\n\005Va" +
-            "lue\030\002 \001(\t\"O\n\026StorageResponseMessage\022%\n\005E" +
-            "rror\030\001 \001(\0132\026.protocol.ErrorMessage\022\016\n\006Re" +
-            "sult\030\002 \001(\t\"\204\001\n\016StorageMessage\0227\n\016Storage" +
-            "Request\030\001 \001(\0132\037.protocol.StorageRequestM" +
-            "essage\0229\n\017StorageResponse\030\002 \001(\0132 .protoc" +
-            "ol.StorageResponseMessage\"a\n\030PropertiesR" +
-            "equestMessage\022\020\n\010TeamUUID\030\001 \001(\t\022\017\n\007TypeS" +
-            "tr\030\002 \001(\t\022\020\n\010TypeUUID\030\003 \001(\t\022\020\n\010FieldKey\030\004" +
-            " \001(\t\"R\n\031PropertiesResponseMessage\022%\n\005Err" +
-            "or\030\001 \001(\0132\026.protocol.ErrorMessage\022\016\n\006Resu" +
-            "lt\030\002 \001(\t\"\223\001\n\021PropertiesMessage\022=\n\021Proper" +
-            "tiesRequest\030\001 \001(\0132\".protocol.PropertiesR" +
-            "equestMessage\022?\n\022PropertiesResponse\030\002 \001(" +
-            "\0132#.protocol.PropertiesResponseMessage\"\305" +
-            "\001\n\013CmdbMessage\0222\n\006Sender\030\001 \001(\0132\".protoco" +
-            "l.PluginInstanceDescriptor\022&\n\004Host\030\002 \001(\013" +
-            "2\030.protocol.HostDescriptor\022)\n\007Storage\030\024 " +
-            "\001(\0132\030.protocol.StorageMessage\022/\n\nPropert" +
-            "ies\030\025 \001(\0132\033.protocol.PropertiesMessageB " +
-            "\n\036com.ones.openplatform.protocolb\006proto3"
+    java.lang.String[] descriptorData = {
+      "\n\ncmdb.proto\022\010protocol\032\014common.proto\"3\n\025" +
+      "StorageRequestMessage\022\013\n\003Key\030\001 \001(\t\022\r\n\005Va" +
+      "lue\030\002 \001(\t\"O\n\026StorageResponseMessage\022%\n\005E" +
+      "rror\030\001 \001(\0132\026.protocol.ErrorMessage\022\016\n\006Re" +
+      "sult\030\002 \001(\t\"\204\001\n\016StorageMessage\0227\n\016Storage" +
+      "Request\030\001 \001(\0132\037.protocol.StorageRequestM" +
+      "essage\0229\n\017StorageResponse\030\002 \001(\0132 .protoc" +
+      "ol.StorageResponseMessage\"a\n\030PropertiesR" +
+      "equestMessage\022\020\n\010TeamUUID\030\001 \001(\t\022\017\n\007TypeS" +
+      "tr\030\002 \001(\t\022\020\n\010TypeUUID\030\003 \001(\t\022\020\n\010FieldKey\030\004" +
+      " \001(\t\"R\n\031PropertiesResponseMessage\022%\n\005Err" +
+      "or\030\001 \001(\0132\026.protocol.ErrorMessage\022\016\n\006Resu" +
+      "lt\030\002 \001(\t\"\223\001\n\021PropertiesMessage\022=\n\021Proper" +
+      "tiesRequest\030\001 \001(\0132\".protocol.PropertiesR" +
+      "equestMessage\022?\n\022PropertiesResponse\030\002 \001(" +
+      "\0132#.protocol.PropertiesResponseMessage\"\305" +
+      "\001\n\013CmdbMessage\0222\n\006Sender\030\001 \001(\0132\".protoco" +
+      "l.PluginInstanceDescriptor\022&\n\004Host\030\002 \001(\013" +
+      "2\030.protocol.HostDescriptor\022)\n\007Storage\030\024 " +
+      "\001(\0132\030.protocol.StorageMessage\022/\n\nPropert" +
+      "ies\030\025 \001(\0132\033.protocol.PropertiesMessageB " +
+      "\n\036com.ones.openplatform.protocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-        .internalBuildGeneratedFileFrom(descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[]{
-                com.ones.openplatform.protocol.Common.getDescriptor(),
-            });
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.ones.openplatform.protocol.Common.getDescriptor(),
+        });
     internal_static_protocol_StorageRequestMessage_descriptor =
-        getDescriptor().getMessageTypes().get(0);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_protocol_StorageRequestMessage_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_StorageRequestMessage_descriptor,
-        new java.lang.String[]{"Key", "Value",});
+        new java.lang.String[] { "Key", "Value", });
     internal_static_protocol_StorageResponseMessage_descriptor =
-        getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_protocol_StorageResponseMessage_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_StorageResponseMessage_descriptor,
-        new java.lang.String[]{"Error", "Result",});
+        new java.lang.String[] { "Error", "Result", });
     internal_static_protocol_StorageMessage_descriptor =
-        getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_protocol_StorageMessage_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_StorageMessage_descriptor,
-        new java.lang.String[]{"StorageRequest", "StorageResponse",});
+        new java.lang.String[] { "StorageRequest", "StorageResponse", });
     internal_static_protocol_PropertiesRequestMessage_descriptor =
-        getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_protocol_PropertiesRequestMessage_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_PropertiesRequestMessage_descriptor,
-        new java.lang.String[]{"TeamUUID", "TypeStr", "TypeUUID", "FieldKey",});
+        new java.lang.String[] { "TeamUUID", "TypeStr", "TypeUUID", "FieldKey", });
     internal_static_protocol_PropertiesResponseMessage_descriptor =
-        getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_protocol_PropertiesResponseMessage_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_PropertiesResponseMessage_descriptor,
-        new java.lang.String[]{"Error", "Result",});
+        new java.lang.String[] { "Error", "Result", });
     internal_static_protocol_PropertiesMessage_descriptor =
-        getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_protocol_PropertiesMessage_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_PropertiesMessage_descriptor,
-        new java.lang.String[]{"PropertiesRequest", "PropertiesResponse",});
+        new java.lang.String[] { "PropertiesRequest", "PropertiesResponse", });
     internal_static_protocol_CmdbMessage_descriptor =
-        getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_protocol_CmdbMessage_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_CmdbMessage_descriptor,
-        new java.lang.String[]{"Sender", "Host", "Storage", "Properties",});
+        new java.lang.String[] { "Sender", "Host", "Storage", "Properties", });
     com.ones.openplatform.protocol.Common.getDescriptor();
   }
 
