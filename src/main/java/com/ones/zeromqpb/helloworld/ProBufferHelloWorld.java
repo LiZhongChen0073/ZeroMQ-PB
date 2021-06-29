@@ -1,7 +1,7 @@
 package com.ones.zeromqpb.helloworld;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.ones.protocol.example.Person;
+import com.ones.zeromqpb.example.Person;
 
 public class ProBufferHelloWorld {
   public static void main(final String[] args) throws InvalidProtocolBufferException {

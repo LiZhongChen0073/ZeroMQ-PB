@@ -1,7 +1,7 @@
 package com.ones.zeromqpb.helloworld;
 
-import com.ones.protocol.example.AddressBook;
-import com.ones.protocol.example.Person;
+import com.ones.zeromqpb.example.AddressBook;
+import com.ones.zeromqpb.example.Person;
 
 import java.io.FileInputStream;
 
