@@ -1,6 +1,5 @@
 package com.ones.zeromqpb;
 
-import com.google.protobuf.InvalidProtocolBufferException;
 import com.ones.openplatform.protocol.Common;
 import com.ones.openplatform.protocol.Control;
 import com.ones.openplatform.protocol.Message;
@@ -68,8 +67,7 @@ public class RouterMultipleDealerByProtocolTest {
   private Message.PlatformMessage getPlatformMessage() {
     Common.RouterNode.Builder distinctRouterBuilder = Common.RouterNode.newBuilder();
     distinctRouterBuilder.setID("R000001");
-    // 生成的map都是不可变的map
-//    distinctRouterBuilder.getTagsMap().put("1","1");
+    distinctRouterBuilder.putTags("1","1");
     Common.RouterNode.Builder sourceRouterBuilder = Common.RouterNode.newBuilder();
     sourceRouterBuilder.setID("H000001");
     Common.RouterMessage.Builder routerMessageBuilder = Common.RouterMessage.newBuilder();
@@ -78,12 +76,9 @@ public class RouterMultipleDealerByProtocolTest {
     Common.HttpRequestMessage.Builder httpRequestMessageBuilder = Common.HttpRequestMessage.newBuilder();
     httpRequestMessageBuilder.setMethod("GET");
     httpRequestMessageBuilder.setUrl("https://www.baidu.com");
-    Common.HttpRequestMessage requestMessage = httpRequestMessageBuilder.build();
-//    requestMessage.getHeadersMap() = new HashMap<>();
-//    Map<String, Common.HeaderVal> headersMap = requestMessage.getAllFields()
-//    headersMap.put("wd", Common.HeaderVal.newBuilder().addVal("你好").build());
+    httpRequestMessageBuilder.putHeaders("wd", Common.HeaderVal.newBuilder().addVal("你好").build());
     Common.HttpContextMessage.Builder httpContextMessageBuilder = Common.HttpContextMessage.newBuilder();
-    httpContextMessageBuilder.setRequest(requestMessage);
+    httpContextMessageBuilder.setRequest(httpRequestMessageBuilder.build());
     Plugin.PluginMessage.Builder pluginMessageBuilder = Plugin.PluginMessage.newBuilder();
     pluginMessageBuilder.setHttp(httpContextMessageBuilder);
     Message.PlatformMessage.Builder platformMessageBuilder = Message.PlatformMessage.newBuilder();
