@@ -98,7 +98,7 @@ public class RouterMultipleDealerByProtocolTest {
       ZMQ.setSocketOption(dealer, ZMQ.ZMQ_IDENTITY, "Java");
       ZMQ.connect(dealer, "tcp://127.0.0.1:12345");
       String helloStr = "Hello, I'm Java Dealer";
-      for (int i = 0; i < 2; i++) {
+      for (int i = 0; i < 20; i++) {
         Thread.sleep(1000);
         int byteLength = ZMQ.send(dealer, helloStr, 0);
         Assert.assertEquals(byteLength, helloStr.length());
@@ -130,9 +130,6 @@ public class RouterMultipleDealerByProtocolTest {
         .version(HttpClient.Version.HTTP_2)
         .uri(URI.create(url))
         .timeout(Duration.ofMillis(5009))
-        //发起一个 post 消息，需要存入一个消息体
-//        .POST(HttpRequest.BodyPublishers.ofString("hello"))
-        //发起一个 get 消息，get 不需要消息体
         .GET()
         .build();
     return client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -148,7 +145,7 @@ public class RouterMultipleDealerByProtocolTest {
       ZMQ.setSocketOption(dealer, ZMQ.ZMQ_IDENTITY, "Go");
       ZMQ.connect(dealer, "tcp://127.0.0.1:12345");
       String helloStr = "Hello, I'm go Dealer";
-      for (int i = 0; i < 20; i++) {
+      for (int i = 0; i < 200; i++) {
         Thread.sleep(1000);
         int byteLength = ZMQ.send(dealer, helloStr, 0);
         Assert.assertEquals(byteLength, helloStr.length());
