@@ -147,8 +147,8 @@ public class RouterMultipleDealerByProtocolTest {
       String helloStr = "Hello, I'm go Dealer";
       for (int i = 0; i < 200; i++) {
         Thread.sleep(1000);
-        int byteLength = ZMQ.send(dealer, helloStr, 0);
-        Assert.assertEquals(byteLength, helloStr.length());
+        int byteLength = ZMQ.send(dealer, i + helloStr, 0);
+        Assert.assertEquals(byteLength, (i + helloStr).length());
         Msg result = ZMQ.recv(dealer, 0);
         System.out.println("receive msg from platform: " + convertFromMsg(result));
       }
